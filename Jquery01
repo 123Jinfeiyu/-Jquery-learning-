@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<style type="text/css">
+		div {
+			width: 200px;height: 200px;background-color: pink;
+		}
+		.current{background-color: red;}
+		.king{
+			width: 852px;margin: 100px auto;
+			background: url(5.png) no-repeat;
+			 overflow: hidden;padding: 10px;
+		.king ul{
+			list-style: none;
+		}
+		.king li{
+ 			position: relative;float: left
+			width:69px;height: 69px;border-radius: 5px;
+		}
+		/* 设置大小方块的背景色 */
+	    .redl{background: #FF3333;}
+		.red2{background: #CC0000;}
+		
+	</style>
+	<script type="text/javascript" src="../js/jQuery.min.js"></script>
+	</head>
+	<body>
+		<!-- 思考：如果script放这个位置可以吗？ -->
+
+        <!-- 如果我非想要放这个位置需要怎么做？ -->
+	<script type="text/javascript">
+		// $("div").hide();
+		// // js原生写法
+		// var div=document.querySelector("div");
+		// div.style.display="none";
+		//类似vue的钩子函数开头就给挂上作用函数
+		//法一：
+		// $(function(){
+		// 		 $("div").hide();
+		// })
+		//法二：
+		// jQuery(function(){
+		// 		 $("div").hide();
+		// })
+		//法三：
+		// $(document).ready(function(){
+		// 	var div=document.querySelector("div");
+		// 	div.style.display="none";
+		// })
+		// 法四：
+		// jQuery(document).ready(function(){
+		// 	var div=document.querySelector("div");
+		// 	div.style.display="none";
+		// })
+		//创建jquery的对象
+		// console.log($("div"));
+		//去空格
+		// console.log($.trim(" a "));
+		//常见的误区,思考：why has no function?
+		// var myDiv=document.querySelector('div');
+		// myDiv.hide();
+		//更有甚者
+		// var div=$('div');
+		// div.style.display='none';
+		//问题：DOM和jquery对象如何进行相互转换？
+	    //DOM在哪的问题
+		//jQuery封装写法
+		// $("div")[0];
+		// $("div")[0].get(0);
+		// $("div")[0].style.display='none';
+		//好的，封装问题解决了，那么如何操作我们的元素呢？
+		// var myDiv=document.querySelector('div');//获取dom，但是注意他是向上找的
+		// var div=$(myDiv);//在jquery找到dom，转化为jquery对象
+		// //对比
+		// jQuery(function(){
+		// 		div.hide();//这个div的作用是整个html，注意下作用域
+		// })
+	    //jQuery
+		//jq的基本选择器
+		//类选择器
+		// console.log($(".nav"));
+		//层级选择器
+		// console.log($('ul li'));
+		//隐式迭代,一下子干一群标签和其属性无关
+		// console.log($("div"));
+		// $("div").css("background","pink");
+		//筛选选择器
+		// $("ul li:first").css("color","red");
+		// $("ul li:eq(2)").css("color","blue");
+		//找下ul>li
+		// console.log($(".son").parent());
+		// console.log($(".father").find("div"));
+	//事件处理
+	//鼠标指针经过事件等
+	// $(".nav>li").mouseover(function(){
+	// 	$(this).children("ul").show();
+	// });
+	// //鼠标指针离开
+	// $(".nav>li").mouseout(function(){
+	// 	$(this).children("ul").hide();
+	// });
+//排他思想
+	// $("button").click(function(){
+	// 	$(this).css("background","pink");
+	// 	$(this).sibings("button").css("background","");
+	// })
+//思考：如何用jquery实现一个精品展示页面？
+	// $("#left li").mouseover(function(){
+	// 	var index=$(this).index();
+	// 	console.log(index);
+	// 	$("content div").eq(index).show();
+	// 	$("content div").eq(index).siblings().hide();
+	// })
+//复习：闭包函数的链式调用
+	// var obj={
+	// 	fn1:function(){
+	// 		console.log('fn1');
+	// 		return{
+	// 			fn2:function(){
+	// 				console.log('fn2');
+	// 			}
+	// 		}
+	// 	}
+	// };
+	// obj.fn1().fn2();
+	//思考：与我们讲的闭包函数有啥联系？
+		// 	$("content div").eq(index).siblings().hide();
+	//其他选择器自行研究！
+	//修改样式
+	//单个
+	// console.log($("div").css("width"));
+	//多个
+	// $("div").css({width:400,height:400,backgroundColor:"red"})
+	//单个类操作
+	// $(selector).addClass(className);
+	// $("div").click(function(){
+	// 	$(this).addClass("current");
+	// });
+	//多个
+	// $(selector).addClass(className);
+	// $("div").click(function(){
+	// 	$(this).addClass("current current1 current2");
+	// });
+	//同类操作：removeClass()
+	//toggleClass()判类空后添加（删除）
+	// $('.tab_list li').click(function(){
+	// 	$(this).addClass("current").siblings().removeClass("current");
+	// 	var index=$(this).index();
+	// 	console.log(index);
+	// 	//让内容区域里相应索引号的item显示，其余的item隐藏
+	// 	$(".tab_con .item").eq(index).show().siblings().hide();
+	// })
+	// //区别类操作和clasName
+	// var one=document.querySelector('.one');
+	// one.className='one';
+	// one.className='two'; //失去one的类名
+	// //思考：如何同时拥有双类名？
+	// $('.two').addClass('one');
+	// $('.two').removeClass('one');
+	// jquery动画
+	// 模拟显示与隐藏功能
+	// $('button').eq(0).click(function(){
+	// 	$('div').show(1000,function(){
+	// 		alert("已经显示");
+	// 	})
+	// })
+	// $('button').eq(1).click(function(){
+	// 	$('div').show(1000,function(){
+	// 		alert("已经隐藏");
+	// 	})
+	// })
+	// $('button').eq(1).click(function(){
+	// 	$('div').toggle(1000);
+	// })
+// //鼠标指针滑动效果
+// $(".nav>li").mouseover(function(){
+// 	$(this).children("ul").slideDown(200);
+// });
+// $(".nav>li").mouseover(function(){
+// 	$(this).children("ul").slideUp(200);
+// });
+//hover() 
+// $(".nav>li").hover(function(){
+// 	$(this).children("ul").slideDown(200);	
+// },function(){
+// 	$(this).children("ul").slideUp(200);
+// 	$(this).children("ul").slideToggle(200);
+	
+// }
+// );
+//stop cartoon
+// $("div").stop();
+//淡入淡出
+// $(".box div").fadeTo(2000,0.2);
+// $(".box div").hover(function(){
+// 	$(this).fadeTo(1,1);
+// },function(){
+// 	$(this).fadeTo(1,0.2);
+// }
+// )
+//自定义动画
+// $("button").click(function(){
+// 	$("div").animate({left:500,top:300,opcity:.4,width:500},500);	
+// });
+//最终的大boss=>手风琴
+// $(".king li").mouseenter(function(){
+// 	$(this).stop().animate({
+// 		width:224;
+// 	}).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
+// 	$(this).siblings("li").stop.animate({
+// 		width:69;
+// 	}).find(".small").stop().fadeOut().siblings(".big").stop().fadeOut();
+// })
+//编程题
+//1，使用jQuery设置页面中的div元素的宽度为200px，高度200px
+//法一：
+// $('div').css("width","200px")
+// $('div').css("height","200px")
+//法二：
+// $('div').css({width:200,height:400})
+//2，实现页面中的div元素向右运动100px后回到起始位置的动画效果
+//方法一css法
+    <style>
+        .container{
+            width: 100px; <!-- 设置容器的宽度为100像素 -->
+            height: 100px; <!-- 设置容器的高度为100像素 -->
+            background-color: red; <!-- 设置容器的背景颜色为红色 -->
+            animation: move 1s linear infinite; <!-- 应用名为"move"的动画，持续1秒，使用线性时间函数，无限循环 -->
+        }
+        @keyframes move {
+            0% {
+                transform: translateX(0); <!-- 在0%关键帧，将transform属性设置为translateX(0)，表示初始位置（不水平平移） -->
+            }
+            100% {
+                transform: translateX(100px); <!-- 在100%关键帧，将transform属性设置为translateX(100px)，表示向右平移100像素 -->
+            }
+        }
+	//方法二jquery
+	先定义一个100px的盒子
+	$(".div").animate({left:'100px'});
+	$(".div").animate({left:'0px'});
+    </style>
+    <div class="container"></div> 
+	</script>
+	<div class="king">
+		<ul>
+			<li class="current">
+				<div class="small redl"></div>
+			    <div class="big red2"></div>
+			</li>
+			<li>
+				<div class="small orangel"></div>
+				<div class="big orange2"></div>
+			</li>
+			<li>
+			       <div class="small yellowl"></div>
+				   <div class="big yellow2"></div>
+			</li>
+			<li>
+				<div class="small greenl"></div>
+				<div class="big green2"></div>
+			</li>
+			<li>
+				<div class="small bluel"></div>
+				<div class="big blue2"></div>
+			</li>
+			<li>
+			<div class="small pinkl"></div>
+			<div class="big pink2"></div>
+			</li>
+			<li>
+			<div class="small purplel"></div>
+			<div class="big purple2"></div>
+			</li>
+		</ul>
+	</div>
+	
+	
+	
+		<button>显示</button>
+		<button>隐藏</button>
+		<button>切换</button>	
+	<div></div>
+	
+	
+	
+	<!-- Tab切换 -->
+	<div class="tab">
+		<div class="tab_list">
+			<ul>
+				<li class="current">商品介绍</li>
+				<li>规格与包装</li>
+				<li>售后保障</li>
+				<li>商品评价</li>
+				<li>手机社区</li>
+			</ul>
+		</div>
+			
+		<div class="tab_con">
+			<div class="item" style="display: block;">商品介绍模块内容</div>
+			<div class="item">规格与包装模块内容</div>
+			<div class="item">售后保障模块内容</div>
+			<div class="item">商品评价(50000)模块内容</div>
+			<div class="item">手机社区模块内容</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 修改样式 -->
+	<div>添加类名</div>
+	<div class="current">删除类名</div>
+	<div class="current">切换类名</div>
+	
+	
+	
+	
+	<!-- 精品展示页面 -->
+
+	<div class="wrapper">
+		<ul id="left">
+			<li><a href="#">女靴</a></li>
+			<li><a href="#">雪地靴</a></li>
+			<li><a href="#">冬裙</a></li>
+		</ul>
+		<div id="content">
+			<div><a href=""><img src="" alt=""></a></div>
+			<div><a href=""><img src="" alt=""></a></div>
+			<div><a href=""><img src="" alt=""></a></div>
+		</div>
+	</div>
+	
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<button>按钮3</button>
+	<ul class="nav1">
+		<li><a href="#">微博</a>
+				<ul>
+					<li><a href="#">私信</a></li>
+					<li><a href="#">评论</a></li>
+					<li><a href="#">@我</a></li>
+				</ul>
+		</li>
+	</ul>
+	
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+		<ul class="father">
+			<li class="son">我是ul的儿子li</li>
+			<li>我是ul的li</li>
+		</ul>
+		<div class="nav">空属性字段传参</div>	
+		
+		
+	</body>
+</html>
