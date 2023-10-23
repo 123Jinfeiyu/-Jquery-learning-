@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+.check-cart-item{
+	background: red;
+}
+/* 定义下元素的属性，以便获取标签的额属性 */
+div{
+	width: 200px;
+	height: 200px;
+	background-color: #000000;
+    padding: 10px;
+	border: 15px solid #000000;
+	margin: 20px;
+}
+		</style>
+		<script type="text/javascript" src="./js/car.js"></script>
+		<script type="text/javascript" src="./js/jQuery.min.js"></script>
+	</head>
+	<body>
+		<!-- 测试盒子的颜色转换 -->
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div index="1" data_index="2">
+			<a href="http://www.baidu.com">I am div </a>
+		</div>
+		<!-- <script type="text/javascript">
+			// prop（）方法
+			console.log($("a").prop("href")); //百度主页
+			$("a").prop('title', "index");
+			//开发中的使用
+			//1，检测复选框是否被选中
+			$('input').change(function() {
+				console.log($(this).prop("checked"));
+			});
+			//attr()方法，给标签添加非固有属性
+			console.log($("div").attr("index")); //get
+			console.log($("div").attr("data-index")); //set
+			$("div").attr("index", 3); //set
+			$("div").attr("data_index", 4); //set
+			//data()方法
+			$("div").data("uname", "andy"); //set
+			console.log($("div").data("uname")); //get
+			//怎样自己做一个购物车？
+			//学会模块化思想
+			</script> -->
+		<!-- // 购物车基本框架 -->
+		<div class="cart-warp">
+            <!-- header mouble--> 
+			<div class="cart-thead">
+            <div class="t-checkbox">
+				<input type="checkbox" name="" id="" class="checkall">全选
+			</div>
+			<div class="t-goods">shop</div>
+			<div class="t-price">price</div>
+			<div class="t-num">number</div>
+			<div class="t-sum">sum price</div>
+			<div class="t-action">control</div>
+			</div>
+			<!-- shop list mouble -->
+			<div class="cart-item-list">
+				<div class="cart-item">
+					<div class="p-checkbox">
+						<input type="checkbox" checked class="j-checkbox">
+					</div>
+					<div class="p-goods">
+						<div><img src=""></div>
+					</div>
+					<div class="p-msg">shop name</div>
+					<div class="p-price">12.60</div>
+					<div class="p-num">
+						<div class="quantity-form">
+							<a href="javascript:;" class="decrement">-</a>
+							<input type="text" class="itxt" value="1">
+						    <a href="javascript:;" class="increment">+</a>
+						</div>
+					</div>
+					<div class="p-sum">￥12.60</div>
+				    <div class="p-action"><a href="javascript:;">删除</a></div>
+				</div>	
+			</div>
+			<!-- total mouble -->
+			<div class="cart-floatbar">
+				<div class="select-all"><input type="checkbox" name="" id="" class="checkall"></div>
+				<div class="operation">
+					<a href="javascript:;"class="remove-batch">delete the selected shop</a>
+					<a href="javascript:;" class="clear-all">clear the cart car</a>
+				</div>
+				<div class="toobar-right">
+					<div class="amount-sum">already choosen<em>2</em>shop
+					</div>
+					<div class="price-sum">总价：<em>￥22.00</em></div>
+					<div class="btn-area">go to pay</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+	</body>
+</html>

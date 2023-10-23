@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<style type="text/css">
+		body{
+			height:12.5rem;
+		}
+		.back{
+			position: fixed;width: 150px;height: 150px;
+		   background-color: pink; right: 30px;bottom: 100px; display: none;
+		}
+		.container{
+			width: 900px;
+			height: 500px;
+			background-color:skyblue;margin: 400px auto;
+		}
+	</style>
+	</head>
+	<body>
+		<button class="back">返回顶部</button>
+		<div class="container"></div>
+		<script src="js/jQuery.min.js"></script>
+		<script type="text/javascript">
+			// 使用Scroll方法control
+			var boxTop=$(".container").offset().top;
+			$(window).scroll(function(){
+				if($(document).scrollTop()>=boxTop){
+					$(".back").fadeIn();
+				}
+				else
+				{
+				    $(".back").fadeOut();	
+				}
+				});
+				$(".back").click(function(){
+					$("body, html").stop().animate({
+						scrollTop:0
+					});
+				});
+				//练习，flag互斥锁的使用
+		</script>	
+		
+	</body>
+</html>
