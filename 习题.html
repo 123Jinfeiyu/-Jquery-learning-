@@ -3,3 +3,112 @@ jquery的用于获取元素自定义属性的方法是？
 var customValue = $("#myElement").data("custom-value");
 什么方法来设置元素的html内容?
 $("#myElement").html("<p>This is the new content.</p>");
+// 使用 .each() 方法遍历所有的 <li> 元素
+$("li").each(function(index) {
+  // $(this) 表示当前迭代的 <li> 元素
+  console.log("Item " + (index + 1) + ": " + $(this).text());
+});
+var elementWidth = $("#myElement").width();
+var elementHeight = $("#myElement").height();
+var scrollTopDistance = $("#myElement").scrollTop();
+console.log("卷去顶部的距离：" + scrollTopDistance);
+内部添加元素可以实现在元素内部添加元素并且放到内容的最后面或者最前面。
+正确。你可以使用方法如 .append() 或 .prepend() 来在元素内部添加元素，它们分别用于将新元素添加到内容的最后面或最前面。
+外部添加就是把内容放入目标元素的后面或者前面。
+错误。外部添加通常指的是将元素添加到目标元素的外部，而不是内部。你可以使用方法如 .insertAfter() 或 .insertBefore() 来将元素放到目标元素的后面或前面。
+$.each() 方法可用于遍历任何对象，主要用于数据处理，比如数组、对象。
+正确。$.each() 方法可用于遍历各种对象，包括数组和对象。它是用于数据处理和迭代的强大工具。
+width()/height() 用于设置 width 和 height + padding + border + margin。
+错误。.width() 和 .height() 方法用于获取或设置元素的内部宽度和高度，不包括 padding、border 和 margin。如果你想获取包括 padding 和 border 的宽度或高度，可以使用 .innerWidth() 和 .innerHeight() 方法。如果需要包括 margin，可以使用 .outerWidth() 和 .outerHeight()。
+offset() 方法获取元素的位置，返回的是一个对象，包含 left 和 top 属性。
+正确。offset() 方法用于获取元素相对于文档的位置，返回的是一个包含 left 和 top 属性的对象，用于描述元素的水平和垂直位置。
+ offset方法
+var elementOffset = $("#myElement").offset();
+console.log("元素的 top 位置：" + elementOffset.top);
+console.log("元素的 left 位置：" + elementOffset.left);
+// 设置元素的位置
+$("#myElement").css({
+  top: elementOffset.top + 50,
+  left: elementOffset.left + 50
+});
+    让我为你逐一回答和解释这些问题：
+
+1. C.offset() 方法获取元素的位置，返回的是一个对象。 D.offset() 方法获取元素的位置跟级有关系。
+   
+2. 下列属于 jQuery 中获取属性方法的是：
+   - A. attr()
+   - C. html()
+   - D. text()
+
+3. 关于 prop() 方法，正确的描述是：
+   - B. 用来获取元素固有属性。
+
+4. 关于 jQuery 中方法的说法，错误的是：
+   - B. text() 方法获取表单元素的值。
+
+5. 关于 jQuery 中事件的描述，错误的是：
+   - D. trigger() 与 triggerHandler() 的区别是 trigger() 不会触发元素的默认行为。
+
+**简答题：**
+
+1. 常用的 jQuery 获取属性的方法包括：
+   - `.attr()` 用于获取或设置元素的属性。
+   - `.prop()` 用于获取或设置元素的属性值。
+   - `.html()` 用于获取或设置元素的 HTML 内容。
+   - `.text()` 用于获取或设置元素的纯文本内容。
+
+2. `trigger()` 方法和 `triggerHandler()` 方法的区别在于事件触发的范围和行为：
+   - `trigger()` 可以触发元素上绑定的事件，并且会冒泡到祖先元素，同时执行元素的默认行为。
+   - `triggerHandler()` 只触发元素上绑定的事件，不会冒泡，也不执行元素的默认行为。
+
+3. jQuery 中的 `on()` 方法可以实现事件委派，让一个祖先元素监听子元素的事件。这可以减少事件处理程序的数量，提高性能，并且可以动态地添加或删除子元素而不必重新绑定事件。示例代码如下：
+
+```html
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  // 使用事件委派，当点击任何 <li> 元素时触发
+  $("#myList").on("click", "li", function() {
+    alert($(this).text());
+  });
+</script>
+```
+
+**编程题：**
+
+1. 使用 jQuery 实现对象的深拷贝可以使用 `$.extend(true, {}, sourceObject)` 方法。这将创建目标对象的深拷贝，包括嵌套对象和数组。
+
+```javascript
+var sourceObject = { name: "John", age: 30, address: { city: "New York", zip: "10001" } };
+var deepCopy = $.extend(true, {}, sourceObject);
+console.log(deepCopy);
+```
+
+2. 使用 jQuery 实现当表单元素失去焦点时，显示"请输入内容信息"的示例代码如下：
+
+```html
+<input type="text" id="myInput" placeholder="请输入内容">
+<div id="message"></div>
+
+<script>
+$("#myInput").blur(function() {
+  var inputValue = $(this).val();
+  if (inputValue === "") {
+    $("#message").text("请输入内容信息");
+  }
+});
+</script>
+```
+
+这段代码会在输入框失去焦点时检查输入值，如果为空，则在 `#message` 元素中显示提示信息。
+
+
+
+
+
+
+   
