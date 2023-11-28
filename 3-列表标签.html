@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 无序列表  ul   子级标签 只能是li  (ul 父  儿子只认 li) -->
+    <ul type="disc">
+        <!-- 在ul列表中 展示内容  需要配合li标签来使用   -->
+        <li>
+            华为
+        </li>
+        <li>
+            小米
+        </li>
+    </ul>
+
+    <!-- circle 空心圆点 -->
+    <!-- <ul type="circle"> -->
+    <!-- 实现 黑方块 -->
+    <!-- <ul type="square"> -->
+    <!-- none就是没符号 -->
+    <ul type="none">
+        <li>左手</li>
+        <li>浅安</li>
+        <li>无涯</li>
+        <li>雨墨</li>
+    </ul>
+
+    <!-- ul>li*5 快捷生成  五个li标签 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>
+            <a href="">我是超链接  </a>
+        </li>
+    </ul>
+    <!-- 列表里面嵌套 超链接  -->
+
+    <!-- 有序列表  只能是li标签  -->
+    <ol type="a">
+       <li>浅安</li>
+       <li>兔子</li>
+       <li>鸢尾</li>
+       <li>小周</li>
+       <li>......</li>
+    </ol>
+
+    <ol type="I">
+        <li>浅安</li>
+        <li>兔子</li>
+        <li>鸢尾</li>
+        <li>小周</li>
+        <li>......</li>
+     </ol>
+
+     <!-- 有序列表 清除序号 那就使用css样式来清除   -->
+     <ol style="list-style: none;">
+        <li>浅安</li>
+        <li>兔子</li>
+        <li>鸢尾</li>
+        <li>小周</li>
+        <li>......</li>
+        <li>
+            封夕
+        </li>
+     </ol>
+
+
+     <!-- 自定义列表  dl 自定义列表开头   -->
+     <dl>
+        <!-- dt 自定义列表项目名  -->
+        <dt>项目</dt>
+        <!--dd 项目描述     -->
+        <dd>项目描述</dd>
+     </dl>
+
+     <dl>
+        <!-- 列表名 -->
+        <dt>手机</dt>
+        <!-- 列表项 -->
+        <dd>华为</dd>
+        <dd>小米</dd>
+        <dd>vivo</dd>
+        <dd>oppo</dd>
+        <dd>
+            11111111111
+            <a href=""></a>
+        </dd>
+     </dl>
+     <!-- dl的子级规范  只能是 dt和dd    -->
+
+
+      <!-- 列表之间  嵌套使用    但是要注意规则 -->
+      <!-- 无序列表 套 有序列表  -->
+      <ul>
+        <li>
+            无序列表 
+        </li>
+        <li>
+            <!-- 有序列表   -->
+            <ol>
+                <li>
+                    我是套进去 有序列表里的li标签 
+                </li>
+                <li>
+                    <!-- 自定义列表  -->
+                    <dl>
+                        <dt>项目1</dt>
+                        <dd>描述</dd>
+                        <dt>项目2</dt>
+                        <dd>项目2描述 </dd>
+                    </dl>
+                </li>
+            </ol>
+        </li>
+      </ul>
+</body>
+
+</html>
