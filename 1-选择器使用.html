@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初级选择器</title>
+    <style>
+        /* 标签名 以标签名字进行选择  */
+        /* p{
+            color: red;
+        } */
+
+        /* 类名选择器 */
+        /* .text{
+            color: green;
+        } */
+
+        /* id选择器 */
+        /* #box{
+            color: skyblue;
+        } */
+
+        /* 后代选择器   选中ul标签的 后代叫li的标签  */ 
+        /* ul li{
+            color: pink;
+        } */
+
+        /* 给ul标签设置文字颜色  */
+        /* ul{
+            color: red;
+        } */
+
+
+        /* box 里面 选中p标签后代    找后代 */
+        /* .box p{
+            color: green;
+        } */
+
+
+        /* 子级选择器  父>子  只找儿子  */
+        /* .box>p{
+            color: blue;
+        } */
+
+        /* .box>a>p{
+            color: pink;
+        } */
+
+        /* 通配符    选中页面中  所有标签 */
+        *{
+          color: red;
+        }
+    </style>
+</head>
+<body>
+      <p>文本段落标签</p>
+
+      <p class="text">这个p标签的文字颜色 是绿色</p>
+
+      <div id="box">这个是盒子标签</div>
+
+      <!-- <ul>
+        <li>第一个li</li>
+        <li>第二个li</li>
+        <li>第三个li</li>
+        <li>
+            <div>123</div>
+        </li>
+      </ul> -->
+
+
+      <div class="box">
+         <p>我是p标签 </p>
+         <a href="">
+            <p>我是放到 a标签里面p</p>
+         </a>
+      </div>
+
+
+</body>
+</html>
