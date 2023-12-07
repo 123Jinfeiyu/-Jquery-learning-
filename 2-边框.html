@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        /* wrap是类名选择器   */
+        .wrap{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 内边距 */
+            padding: 10px;
+            /* 边框 border */
+            /* border: 10px solid red; */
+            /*边框样式: 边框大小10像素 边框风格实线  边框颜色红色 */
+
+            /* 边框分解写法  */
+            /* 边框大小 */
+            border-width: 10px;
+            /* 边框风格 solid 实线 */
+            /* border-style: solid; */
+            /* 虚线 dashed */
+            border-style: dashed;
+            /* 点状线 dotted */
+            border-style: dotted;
+            /* 双边线 double */
+            border-style: double;
+            /* 边框颜色  */
+            border-color: green;
+
+            /* 边框无 none表示没有   一般用来清除默认边框样式   */
+            border: none;
+        }
+
+        ul{
+            /* 清除列表序号  */
+            list-style: none;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            /* 一个盒子 需要四个不一样的边框颜色  每个方向都不一样   */
+            /* border: 5px solid red; */
+
+            /* 拆分  单个边的写法   */
+            /* 顶部边框   */
+            border-top: 5px solid red;
+            /* 左边框 */
+            border-left: 5px solid green;
+            /* 右边框 */
+            border-right: 5px solid purple;
+            /* 底部边框 */
+            /* border-bottom: 5px dotted skyblue; */
+
+
+            /* 细拆分写法   底部边框  */
+            /* 底部边框的大小  */
+            border-bottom-width: 5px;
+            /* 底部边框 风格 */
+            border-bottom-style: solid;
+            /* 底部边框 颜色 */
+            border-bottom-color: skyblue;
+
+        }
+
+        .text{
+            width: 200px;
+            height: 200px;
+            border: 5px solid  red;
+            /* 左边框 颜色 */
+            /* border-left-color: green; */
+            /* 有边框 */
+            /* border-right-color: green; */
+
+            /* 复合边框颜色写法 上下  左右  */
+            border-color: red green;
+        }
+
+        /* 三角形 */
+        .txt{
+            width: 0px;
+            height: 0px;
+            /* border: 50px solid red; */
+            border-top: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid green;
+            border-left: 50px solid green;
+
+            /* 透明色: transparent*/
+        }
+    </style>
+</head>
+<body>
+     <!-- <div class="wrap">
+
+     </div> -->
+
+     <!-- <ul>
+        <li>1111</li>
+     </ul> -->
+
+     <!-- <div class="box">
+         
+     </div>
+
+     <p class="text">
+          需求: 一个盒子 四条边框  上下颜色是一样  左右不一样 
+     </p> -->
+
+     <div class="txt">
+        
+     </div>
+</body>
+</html>

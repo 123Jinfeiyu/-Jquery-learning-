@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 第三种  引入重置样式文件 -->
+    <link rel="stylesheet" href="./reset.css">
+    
+    <style>
+        /*第一种  清除默认样式 简单的   */
+        /* 通配符 选中所有的标签 都干掉   */
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            border: none;
+        }
+
+        /*第二种    找对对应的标签 清除对应的默认样式   常用  */
+        body,
+        dl,
+        dd,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+            border: none;
+        }
+
+
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <p class="text">
+        111111
+    </p>
+</body>
+
+</html>

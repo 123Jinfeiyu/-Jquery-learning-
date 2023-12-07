@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        .box{
+          width: 300px;
+          height: 300px;
+          border: 2px solid  red;
+          /* 默认 内容超出盒子 是正常显示 */
+          overflow: visible;
+
+          /* 溢出隐藏   常用 */
+          overflow: hidden;
+
+          /* 内容不会超出盒子  但是会显示滚动条 */
+          /* overflow: scroll; */
+
+          /* 只要你盒子的内容 超出范围就会显示滚动条不超出则不显示   */
+          /* overflow: auto; */
+        }
+        .box>img{
+            /* width: 400px;
+            height: 200px; */
+            /* 100% 参考 父级结构 宽度    高度同理 */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+      <div class="box">
+          <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F180528b1-7f55-4667-aa52-638b4c85abfa%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704547673&t=83c96c828c1e91aea84a076b28efae86" alt="">
+      </div>
+</body>
+</html>
