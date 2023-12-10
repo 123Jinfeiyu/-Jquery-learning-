@@ -28,25 +28,3 @@ a{
     text-decoration: none;
     color: #000;
 }
-h1{
-	color: rgb(102,102,102);
-}
-.box img{
-	width: 900px;
-	height: 600px;
-}
-.box>ul>li{
-	color: rgb(102,102,102);
-}
-.box{
-	width: 900px;
-	height: 900px;
-	margin: auto;
-	padding: 10px 20px 30px 40px;
-	border-style: dotted;
-	border-width: 10px ;
-	border-left: 5px solid  rgb(204,204,204);
-    border-right: 5px solid  rgb(204,204,204);
-	border-bottom:  5px solid rgb(204,204,204);
-	border-top: 5px solid  rgb(101,16,173);
-	}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素类型转换</title>
+    <style>
+        .box1 {
+            /* 变为行内块 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box2 {
+            /* 变为行内块 */
+            display: inline-block;
+
+            /* 变为行内 */
+            display: inline;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        span{
+            /* 变为块级或者行内块 支持高宽 */
+            /* display: block; */
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* margin: auto; */
+
+            /* 消失 */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        盒子标签
+    </div>
+    <div class="box2">
+        盒子标签
+    </div>
+
+    <span>
+        给我加个高宽
+    </span>
+</body>
+
+</html>
