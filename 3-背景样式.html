@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置浏览器 html body  高度为100% */
+        html,body{
+            height: 100%;
+        }
+        body {
+            /* 背景图片 */
+            background-image: url(https://10wallpaper.com/wallpaper/1366x768/1605/Mountain_sky_lake_grass-Scenery_Photo_HD_Wallpaper_1366x768.jpg);
+            /* 背景不平铺 */
+            background-repeat: no-repeat;
+            /* 背景大小   等比例铺满*/
+            background-size: cover;
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            /* 背景颜色   */
+            background-color: red;
+            border: 5px dashed green;
+        }
+
+        .wrap {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /* 背景图片 */
+            /* background-image: url(./1.webp); */
+            /* 背景图片  大于盒子   只会显示盒子区域部分 其它超出就隐藏  默认从左上角显示图片   */
+
+            /* 背景大小  宽度  高度 */
+            /* background-size: 500px 500px; */
+            /* background-size: 100% 100%; */
+
+
+            /* 背景图片 小于当前盒子 默认背景进行平铺  */
+            background-image: url(./1.png);
+            /* 背景平铺 默认值 */
+            background-repeat: repeat;
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            /* background-size: 100% 100%;  */
+            /* 平铺水平方向  左右平铺 */
+            background-repeat: repeat-x;
+            /* 平铺垂直方向  上下平铺 */
+            background-repeat: repeat-y;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box"></div>
+
+    <div class="wrap">
+
+    </div> -->
+</body>
+
+</html>

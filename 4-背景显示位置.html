@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+            /* 背景图片 */
+            background-image: url(./1.png);
+            /* 背景不平铺 */
+            background-repeat: no-repeat;
+
+            /* 背景图片默认从左上角显示  0px 0px 方位值: top left; */
+            background-position: top left;
+
+            /* 右上角 */
+            background-position: top right;
+
+            /* 图片居中显示  50%居中 /  center */
+            background-position: center;
+
+            /* 
+              第一值表示  背景在x轴显示方向  
+            */
+            background-position: 0px 0px;
+
+            /* 写一个值 另外一个默认就是居中   */
+            /* background-position: 0px; */
+        }
+
+        .logo{
+            width: 200px;
+            height: 70px;
+            background-color: #333;
+            border: 2px solid green;
+            background-image: url(./精灵图1.png);
+            background-position: 25px 0px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+    <div class="logo">
+         
+    </div>
+</body>
+
+</html>

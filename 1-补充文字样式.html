@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        i{
+            /* 默认 倾斜文字 */
+            font-style: italic;
+            font-style:normal;
+        }
+        p{
+            /* 不倾斜 文字 */
+            font-style:normal;
+            /* 倾斜 */
+            /* font-style: italic; */
+        }
+
+        .text{
+            width: 500px;
+            background-color: pink;
+            /* 行高  设置文字的行高 */
+            line-height: 30px;
+        }
+
+        .box{
+            width: 200px;
+            height: 80px;
+            background-color: #096;
+            /* 行高等于高度  垂直居中效果  上下 */
+            line-height: 80px;
+
+            /* 文字 左对齐  */
+            text-align: left;
+            /* 文字 右对齐 */
+            text-align: right;
+            /* 文字居中对齐 */
+            text-align: center;
+        }
+
+        .title{
+            width: 200px;
+            height: 50px;
+            background-color: pink;
+            /* 首行文字缩进 */
+            text-indent: 10px;
+            text-decoration: underline;
+            text-decoration: line-through;
+        }
+
+        .link{
+            /* a标签默认自带下划线 */
+            text-decoration: underline;
+            /* 清除文本线 */
+            text-decoration: none;
+            /* 中横线 */
+            text-decoration: line-through;
+            /* 上划线 */
+            text-decoration: overline;
+
+            /* 文本线颜色修改 */
+            text-decoration-color: red;
+        }
+
+        .wrap{
+            width: 200px;
+            height: 100px;
+            border: 1px solid  red;
+            /* 控制每一个字之间间距 */
+            /* letter-spacing: 30px; */
+            /* 控制单词直接的间隔 */
+            word-spacing: 10px;
+        }
+
+
+        .text1{
+            width: 300px;
+            height: 25px;
+            border: 1px solid orange;
+            /* 文字超出宽度默认会换行显示  */
+            white-space: normal;
+
+            /* 文字不换行显示 */
+            white-space: nowrap;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 变为省略号 */
+            text-overflow: ellipsis;
+        }
+
+
+        .Top-box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid green;
+        }
+        .Top-box>img{
+            width: 100px;
+            height: 100px;
+            /* 中部基线 */
+            vertical-align: middle;
+        }
+        .txt{
+            display: inline-block;
+            background-color: yellow;
+            /* 对齐顶部基线 */
+            vertical-align: top;
+            /* 底部基线 */
+            vertical-align: bottom;
+            /* 中部基线 */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+      <i>文字倾斜</i>
+      <p>文字正常显示</p>
+
+      <p class="text">
+        相信评分，不如相信自己的舌头。”据Vista看天下报道，近日，有关“评分低的店可能更好吃”的话题登上热搜，很多普通网友仿佛遇到知音一般，在评论区分享了自己在高分网红餐厅“踩雷”、爱吃的餐厅却只有3.5分的经历。一些年轻人在频频被花里胡哨的网红餐厅、真假难辨的探店视频“忽悠”之后，也开始叛逆地挥舞起“支持低分餐厅”的大旗，发现了不少明珠蒙尘的餐厅
+      </p>
+
+      <div class="box">
+         大家感觉怎么样
+      </div>
+
+      <h2 class="title">
+         文字内容缩进
+      </h2>
+
+      <a href="" class="link">超链接</a>
+
+      <div class="wrap">
+         <!-- 文字隔开 -->
+
+         Who are you?
+      </div>
+
+      <div class="text1">
+           文字超出会换行显示吗?看一下文字有多少个字
+      </div>
+
+      <div class="Top-box">
+          <img src="./1.webp" alt="">
+          <p class="txt">文字对齐</p>
+      </div>
+</body>
+</html>

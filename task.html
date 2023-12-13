@@ -1,64 +1,125 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>盒模型作业</title>
-    <!-- 引入清除样式文件 -->
+    <title>Document</title>
+    <!-- 清除默认样式  -->
     <link rel="stylesheet" href="./reset.css">
     <style>
-        .wrap{
-            width: 300px;
-            height: 450px;
-            /* 边框样式 */
-            border: 2px solid #ccc;
-            /* 顶部边框 */
-            border-top: 3px solid skyblue;
-            /*上下100像素 左右自适应居中 */
-            margin: 100px auto;
-            /* 内边距 */
-            padding: 10px;
+        body {
+            background-color: #ccc;
         }
 
-        .wrap>h3{
-            color: #706666;
-            /* 底部边框 */
-            border-bottom: 2px solid orange;
-            /* 底部内边距 */
-            padding-bottom: 10px;
+        /* 包裹商品的大盒子 */
+        .box {
+            width: 1180px;
+            height: 250px;
+            /* background-color: red; */
+            /* 外边距 左右自适应居中 */
+            margin: 100px auto;
         }
-        .pic{
-            width: 100%;
-            height: 240px;
-            /* 顶部外边距 */
+
+        .shop1 {
+            /* 行内块元素   */
+            display: inline-block;
+            /* 怪异盒 */
+            box-sizing: border-box;
+            width: 230px;
+            height: 250px;
+            background-color: #FFFFFF;
+            /* 左侧内边距 */
+            /* padding-left: 10px; */
+            padding: 1px;
+
+            /* 文字基线对齐的问题    对齐在顶部基线*/
+            vertical-align: top;
+        }
+
+        .text {
+            font-size: 20px;
+            color: orange;
+            /* 左侧外边距 */
+            margin-left: 10px;
             margin-top: 10px;
         }
-        .text{
-            /* 顶部外边距  */
-            margin-top: 15px;
+
+        .text1 {
+            color: #096;
+            margin-left: 10px;
+            /* margin-top: 5px; */
+        }
+
+        /* 图片大小 */
+        .pic {
+            width: 160px;
+            height: 160px;
+            /* border: 1px solid red; */
+            /* 左外边距 */
+            margin-left: 65px;
+            /* 顶部外边距 */
+            margin-top: 30px;
+        }
+
+        .only{
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
-    <div class="wrap">
-        <!-- 标题 -->
-        <h3>专题推荐 HIGHLIGHTS</h3>
-        <!-- 分割线 -->
-        <!-- <hr> -->
-        <!-- 标题图片 -->
-        <img src="./人民好书记.jpg" alt="" class="pic">
-        <p class="text">
-            深入学习贯彻习近平总书记重要讲话精神
-        </p>
-        <p class="text">
-            深入学习贯彻习近平总书记重要讲话精神
-        </p>
-        <p class="text">
-            深入学习贯彻习近平总书记重要讲话精神
-        </p>
-        <p class="text">
-            深入学习贯彻习近平总书记重要讲话精神
-        </p>
+    <div class="box">
+        <div class="shop1">
+            <p class="text">
+                抱抱果新首发
+            </p>
+            <p class="text1">
+                吃了还想吃
+            </p>
+            <img src="./作业素材/1.jpg" alt="" class="pic">
+        </div>
+        <div class="shop1">
+            <p class="text">
+                海尔冰箱
+            </p>
+            <p class="text1">
+                冻得贼快
+            </p>
+            <img src="./作业素材/2.jpg" alt="" class="pic">
+        </div>
+        <div class="shop1">
+            <p class="text">
+                洗衣机
+            </p>
+            <p class="text1">
+                洗的衣服贼香
+            </p>
+            <img src="./作业素材/3.jpg" alt="" class="pic">
+        </div>
+        
+        <div class="shop1">
+            <p class="text">
+                一瓶酒
+            </p>
+            <p class="text1">
+                喝了睡一宿
+            </p>
+            <img src="./作业素材/4.jpg" alt="" class="pic">
+        </div>
+        <div class="shop1">
+            <p class="text">
+                抱抱果新首发
+            </p>
+            <p class="text1">
+                吃了还想吃1
+            </p>
+            <p class="text1">
+                吃了还想吃2
+            </p>
+            <img src="./作业素材/5.jpg" alt="" class="pic only">
+        </div>
     </div>
 </body>
+
 </html>
