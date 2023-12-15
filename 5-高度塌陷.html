@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .wrap{
+            width: 1000px;
+            height: 500px;
+            background-color: skyblue;
+            border: 1px solid red;
+
+            /* 溢出隐藏 */
+            /* overflow: hidden; */
+        }
+        /* 伪元素清除浮动  */
+        .wrap::after{/*  在wrap盒子的 后面 插入一个 伪元素清除浮动塌陷问题   * /
+            /* 开启伪元素 钥匙  伪元素内容*/
+            content: '';
+            /* 本身伪元素是行内元素  */
+            display: block;
+            clear: both;
+        }
+
+        .left-box{
+            /* 左浮动 */
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+        .center-box{
+            /* 左浮动 */
+            float: left;
+            width: 400px;
+            height: 500px;
+            background-color: pink;
+        }
+        .right-box{
+            /* 右浮动 */
+            float: right;
+            width: 300px;
+            height: 500px;
+            background-color: orange;
+        }
+
+        .foot{
+            width: 1200px;
+            height: 550px;
+            background-color: purple;
+        }
+
+        .clear{
+            /* 同时清除 左右浮动   */
+            clear: both;
+            /* clear 清除浮动属性 */
+            /* 清除左浮动 */
+            /* clear: left; */
+            /* 清除右浮动 */
+            /* clear: right; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- 左侧内容盒子 -->
+        <div class="left-box">
+            左侧内容盒子
+        </div>
+        <!-- 中间盒子 -->
+        <div class="center-box">
+            中间盒子
+        </div>
+        <!-- 右侧内容盒子 -->
+        <div class="right-box">
+            右侧内容盒子
+        </div>
+
+        <!-- 清除浮动盒子 -->
+        <!-- <div class="clear"></div> -->
+    </div>
+
+
+
+    <!-- 底部盒子 -->
+    <div class="foot"></div>
+</body>
+
+</html>

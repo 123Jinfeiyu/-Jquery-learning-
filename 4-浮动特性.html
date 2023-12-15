@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        span{
+            float: left;
+
+            /* 行内块 */
+            /* display: inline-block; */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box{
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: green;
+            margin: auto;
+        }
+
+        .list{
+            width: 1100px;
+            height: 300px;
+            border: 2px solid red;
+            margin: auto;
+        }
+        .list>li{
+            float: left;
+            /* display: inline-block; */
+            width: 200px;
+            height: 300px;
+            background-color: pink;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+     <!-- <span>
+        行内元素1
+     </span>
+     <span>
+        
+     </span>
+
+     <div class="box"></div> -->
+
+
+
+     <ul class="list">
+        <li>1</li>
+        <li>2
+            <p>文字</p>
+        </li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+     </ul>
+</body>
+</html>
