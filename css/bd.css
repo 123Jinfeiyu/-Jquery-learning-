@@ -1,0 +1,161 @@
+body {
+	background-image: url(../img/bg.jpg);
+	background-position: center 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: PingFang-SC-Regular, Helvetica, "Microsoft Yahei", "微软雅黑";
+}
+
+p {
+	margin: 40px;
+	position: relative;
+	clear: both;
+}
+.float-text{
+	position: fixed;
+	/* 颜色继承 */
+color: rgb(191, 189, 187);
+	margin: 0;
+	padding: 0;
+	left: 195px;
+	top: 314px;
+	width:323px;
+	height: 114px;
+}
+.float-text p{
+	margin: 0;
+	padding: 0;
+	color: rgb(191, 189, 187);
+	font-size: 32px;
+	letter-spacing: 3.81px;
+	font-weight: 300;
+}
+.float-text h3{
+	margin: 0;
+	padding: 0;
+	color: rgb(191, 189, 187);
+	font-size: 54px;
+	letter-spacing: 0;
+	font-weight: 700;
+}
+#logo {
+	position: fixed;
+	width: 124.4px;
+	height: 40px;
+	left: 70px;
+	top: 60px;
+}
+
+#login-btn {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	width: 411px;
+	height: 19px;
+}
+
+h3 {
+	color: rgb(32, 34, 35);
+	font-size: 36px;
+	color: #000;
+	padding-bottom: 4px;
+}
+
+.wrap {
+	z-index: 1;
+	right: 139px;
+	top: 50%;
+	position: absolute;
+	float: left;
+	width: 480px;
+	height: 680px;
+	border: #FF0000;
+	border-radius: 12px;
+	background: rgba(255,255,255,.9);
+	opacity: 0.9;
+	margin-top: -340px;
+}
+
+#inner1 {
+	width: 411px;
+	height: 70px;
+	margin: 50px 0 22px 39px;
+}
+
+#inner2 {
+	display: block;
+	float: left;
+	padding-top: 48px;
+	width: 720px;
+	height: 450.39px;
+	position: relative;
+	overflow: hidden;
+}
+
+.inner {
+	background: rgb(172, 168, 164);
+	color:rgb(191, 189, 187);
+	border-radius: 25px;
+	width: 399px;
+	height: 50px;
+	border: 0;
+	/* display: none; */
+}
+
+#BigText {
+	width: 399px;
+	height: 32.29px;
+
+}
+
+#form {
+	margin: -65px 0px 0px 0px;
+	padding: 0px;
+	width: 720px;
+	height: 450.391px;
+}
+
+label {
+	width: 82px;
+	height: 40px;
+}
+
+input {
+	width: 343px;
+	height: 40px;
+}
+
+.input4 {
+	width: 206px;
+	height: 40px;
+}
+
+#litte {
+	width: 0.8125rem;
+	height: 13px;
+}
+
+.little {
+	width: 60px;
+	height: 14px;
+}
+
+#a1 {
+	width: 96px;
+	height: 14px;
+}
+
+#a2 {
+	width: 144px;
+	height: 14px;
+}
+
+#a3 {
+	width: 237px;
+	height: 30.39px;
+}
+
+.validate {
+	width: 130px;
+	height: 40px;
+}
