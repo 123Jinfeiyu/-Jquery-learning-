@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #form{
+            /* position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right:0px;
+            left: 0px; */
+            margin: auto;
+            width: 400px;
+            height: 500px;
+            background-color: skyblue;
+         }
+
+         input{
+            width: 300px;
+            height: 50px;
+            font-size: 20px;
+            background-color: pink;
+         }
+
+         .box{
+            width: 200px;
+            height: 50px;
+            /* 圆角样式 */
+            border-radius: 5px;
+         }
+    </style>
+</head>
+<body>
+    <!-- 
+        form:表单标签
+        action: 表单提交地址  接口 https://.......
+        method: 提交格式 https请求格式   post/get请求    post发送请求   get:拿请求 
+        name:表单名称 
+        target: 提交表单之后  新页面在哪里打开 
+    -->
+     <form action="https://www.baidu.com/" method="get" name="login" target=""  id="form">
+            <!-- 单行文本输入框 -->
+            <!-- 账号: <input type="text"> -->
+
+            <!-- 辅助input标签  用来放文字内容等 -->
+            <label for="">账号:</label>
+            <input type="text">
+
+            <br>
+            <!-- 密码输入框 -->
+            <label for="">密码:</label>
+            <input type="password">
+
+            <!-- 提交按钮 -->
+            <input type="submit">
+
+            <!-- 重置按钮 -->
+            <input type="reset"  name="res">
+
+            <input type="text"  value="我写了什么">
+
+            <!-- 空按钮 -->
+            <input type="button" value="登录">
+
+            <!-- 按钮标签 -->
+            <button>按钮标签</button>
+
+            <input type="text" placeholder="请输入框你的账号" disabled>
+
+            <!-- 文件上传按钮 -->
+            <input type="file">
+     </form>
+
+
+     <input type="text" class="box">
+</body>
+</html>
