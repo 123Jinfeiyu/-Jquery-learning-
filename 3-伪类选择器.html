@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        /* 鼠标引入到  box盒子 改变背景颜色 为绿色 */
+        .box:hover {
+            width: 400px;
+            height: 500px;
+            background-color: green;
+            /* 变为小手 */
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: red;
+        }
+
+        /* 鼠标点击触发  */
+        .wrap {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .wrap:active {
+            background-color: pink;
+        }
+
+
+        /* 获取焦点   点击input  */
+
+        /* 清除默认焦点 */
+        input,
+        button {
+            outline: none;
+        }
+
+        /* 触发焦点  input  */
+        input:focus {
+            background-color: green;
+            border: 1px solid red;
+        }
+
+        .box1 {
+            /* 消失 */
+            display: none;
+            width: 300px;
+            height: 400px;
+            background-color: skyblue;
+        }
+
+        /* 点击 input 获取焦点之后  显示  box1盒子   (~)兄弟选择器     */
+        input:focus~.box1 {
+            /* 显示 */
+            display: block;
+        }
+
+        .rad:checked {
+            width: 50px;
+            height: 50px;
+        }
+
+        .pic {
+            display: none;
+            width: 500px;
+            height: 500px;
+        }
+
+        /* 勾选单选按钮 然后显示图片 */
+        .rad:checked~.pic {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">
+
+    </div>
+
+    <a href="">超链接</a> -->
+
+    <div class="wrap">
+        盒子
+    </div>
+
+    <input type="text">
+    <div class="box1"> 点击输入框显示出来的盒子 </div>
+    <br><br><br><br><br>
+
+    <!-- <input type="radio" class="rad"> -->
+
+    <input type="checkbox" class="rad">
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F7347dcd2-08c7-4704-a723-ccf529e35955%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1705584872&t=61c7e3cd5f7a68709a9d32e64185b9b5"
+        alt="" class="pic">
+</body>
+
+</html>

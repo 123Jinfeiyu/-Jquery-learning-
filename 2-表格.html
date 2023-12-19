@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px;
+            border: 1px solid red;
+            /* 变成单边框线 */
+            border-collapse: collapse;
+        }
+
+        tr,th,td{
+            border: 1px solid red;
+            /* 文字居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        table: 定义表格标签   开头
+        caption: 表格标题
+        tr: 表示表格里面的一行 
+        (tr规范  子级只能是  th或者td )
+        th: 表头  自带加粗  文字居中 
+        td: 一行里面的一个单元格  
+        
+        
+        单元格合并:  
+         上下行合并:  
+         左右列合并:  colspan    从左至右   
+     -->
+    <table>
+        <!--  <table  align="center"  bgcolor="pink">  老写法 -->
+        <caption>爱好调查表</caption>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>爱好</th>
+        </tr>
+        <tr>
+            <td>封夕</td>
+            <td>28岁</td>
+            <td>打游戏</td>
+        </tr>
+        <tr>
+            <td>小欣</td>
+            <td>21岁</td>
+            <td rowspan="2">看电影</td>
+        </tr>
+        <tr>
+            <td>小陈</td>
+            <td>22岁</td>
+            <!-- <td>看电影</td> -->
+        </tr>
+
+        <tr>
+            <td colspan="3">都喜欢封夕老师讲解</td>
+            <!-- <td>都喜欢封夕老师讲解</td>
+            <td>都喜欢封夕老师讲解</td> -->
+        </tr>
+    </table>
+    
+</body>
+</html>
