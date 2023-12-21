@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子级选择器    选中第二个p子元素  */
+       .box>p:nth-child(3){  
+        color: red;
+       }
+
+       /* 同类别选择器   同级相同的元素  */
+       .box>p:nth-of-type(2){
+          color: green;
+       }
+
+       .list>:nth-of-type(odd){
+          color: red;
+       }
+    </style>
+</head>
+<body>
+      <div class="box">
+         <p>第一个p</p>
+         <span>span元素1</span>
+         <span>span元素2</span>
+         <span>span元素3</span>
+         <span>span元素4</span>
+         <span>span元素5</span>
+         <span>span元素6</span>
+         <p>第二个p</p>
+      </div>
+
+
+      <ul class="list">
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+      </ul>
+</body>
+</html>

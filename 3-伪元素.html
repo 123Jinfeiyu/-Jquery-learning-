@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 在元素 内容前面插入 before */
+        .box::before{
+            /* 伪元素内容    */
+            content: '你好啊';
+            color: red;
+            /* 默认行内元素 */
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+
+        /* 内容后面插入   ::after*/
+        .box::after{
+            content: '后面写入的元素';
+            color: pink;
+        }
+
+
+        /* 在text后面插入  */
+        /* .text::after{
+            position: relative;
+            top: -10px;
+            content: '';
+            border-top: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid red;
+        } */
+
+        /* 鼠标悬停  触发伪元素 */
+        .text:hover:after{
+            position: relative;
+            top: -10px;
+            content: '';
+            /* 顶部边框 */
+            border-top: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         这个是box盒子
+    </div>
+
+    <p  class="text">我后面需要一个三角形</p>
+</body>
+</html>
