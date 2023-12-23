@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  类型转换
+
+        // 常见  数字 和 布尔值  字符串 这三者之间转换    
+        let num=123;
+        console.log(typeof num);
+
+        // 通过 String方法 转为 字符串 
+        // console.log(typeof String(num));//  string
+
+        // let str=String(num);
+        // console.log(str,typeof str);  // 字符串 123  
+
+        // 数字值  转布尔值     数字值: 0表示 false   1表示true   
+        let bool=Boolean(num);
+        console.log(bool);//num数字123   转为布尔值  true   
+
+
+
+        // Number 数值类型 
+        let num1=Number('123');  //字符串 123  转为 数值 123  
+        console.log(num1, typeof num1);
+
+        console.log(Number('abc'));//  字符串 abc 不是数字  转为 非数字  NaN 
+
+    </script>
+</body>
+</html>

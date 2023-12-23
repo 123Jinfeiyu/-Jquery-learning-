@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 字符串类型  
+        console.log(1);
+        console.log('封夕');
+        // 字符串 使用 引号 包裹起来的  
+
+
+        // 封夕说:'平安夜快乐'
+        // 字符串里面有相同的引号  换成另外一个引号包裹 
+        let  str="封夕说:'平安夜快乐'";
+        console.log(str);
+
+        // 想要相同的引号 那就转义   : \
+        let  str1='明天一起打 \'游戏\' ';
+        console.log(str1);
+
+        // 字符串换行  
+        let text='我感觉和py方法一样啊 \n换行'
+        console.log(text);
+
+        // 定义字符串  String()
+        let str2=String('你\t好');
+        console.log(str2);
+
+        // 字符串拼接   +拼接  
+        let name='封夕';
+        let speak="大声说:";
+        let game='谁带我打游戏';
+        // 字符串直接 +拼接   
+        console.log(name+speak+game);
+
+        // 字符串1+数字2  结果:12
+        console.log('1'+2);// 字符串 12    js(+)符号 会识别加号两侧   一方字符串 那就是字符串拼接  
+
+        // 模板字符串  ${} 传值  
+        let age=18;
+
+        // console.log(`我今年${age}岁`);
+        alert(`我今年${age}岁`)
+    </script>
+</body>
+</html>

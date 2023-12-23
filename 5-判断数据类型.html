@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数字 
+        console.log(typeof 2);// number 数值类型  
+        console.log(typeof NaN);
+
+        // 字符串
+        let str='文字';
+        console.log(typeof str);//string 字符串类型  
+
+        // 布尔值 boolean
+        console.log(typeof true);
+
+        // console.log(typeof 1<2);// 浏览器 没有那么聪明  直接判断  不会去运算比较 
+        let bool=1<2;
+        // console.log(true,typeof bool);
+        console.log(typeof bool);
+
+        // undefined
+        console.log(typeof undefined);
+
+        // ull 空类型     返回结果是 空对象   
+        console.log(typeof null);// object  空对象  
+        
+
+        // isNaN  用来判断 一个值是否为 非数字   如果是非数字  返回true   如果不是非数字  false  
+        console.log(isNaN('封夕'));//  true
+        console.log(isNaN(NaN));//true
+
+        console.log(isNaN(123));// false  
+        // 非数字 表示 不是数值类型的 都是非数字 
+
+        // 布尔值类型  true和flase  会被转为 数字 1 表示 true  false  表示0   
+        console.log(isNaN(true));
+
+
+        // isFinite  方法 返回布尔值   主要来判断  是否为正常的数字值  
+        console.log(isFinite(123));// true
+
+        console.log(isFinite(NaN));// false
+
+        console.log(isFinite(undefined));//false
+
+        console.log(isFinite('文字'));// 字符串 123  正常    写文字 那就不是正常的   false 
+
+        // null类型  返回true   null值浏览器自动转化为 0  
+        console.log(isFinite(null));//true
+
+
+    </script>
+</body>
+</html>
