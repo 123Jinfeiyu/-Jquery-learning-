@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // 定义空数组   字面量:[]  
+         let arr=[10,'你好'];
+         console.log(arr);
+
+        //用 Array方法 来创建数组  
+        let arr1=Array('左手','封夕');
+        console.log(arr1);
+
+        //获取数组长度   .length
+        let num=[1,2,3,4,5,6,7,8];
+        console.log(num.length);
+
+        // 修改数组长度  4个  
+        num.length=4;
+        console.log(num);
+
+        // 获取当前数组里面对应的数组项  并且打印出来  
+        let food=['苹果','香蕉','馒头','面包'];
+        console.log(food);
+
+        // 获取数组下标  下标序号默认从0 开始  
+        console.log(food[1]);
+        console.log(food[3]);
+
+        // 这个数组最大下标 3    取4  返回 undefined  未定义 
+        console.log(food[4]);// 超出数组长度  返回初始值  未定义 undefined
+        
+
+        // 数组可以取值 自然就可以修改和新增  
+
+        let gamer=['封夕','和','浅安','一起讨论后面阶段的学习'];
+        // console.log(gamer);
+
+        // 把封夕  改为  你
+        // 先找到对应的下标  然后在赋值修改  
+        // console.log(gamer[0]);
+
+        gamer[0]='你';
+        console.log(gamer);
+
+        // 新增  给下标为4的进行 
+        gamer[3] ='然后再买一瓶可乐喝一下';
+        console.log(gamer);
+
+
+        
+    </script>
+</body>
+</html>

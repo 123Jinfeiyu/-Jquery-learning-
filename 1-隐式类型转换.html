@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //  隐式类型转换   
+        // + 加号 是特殊  会将任何值和字符串 拼接    转为字符串  
+        let str= true + '封夕';
+        console.log(typeof str);// true封夕
+
+        // +号  只要有一侧是字符串那就是字符串拼接   
+        console.log('11'+2);//112  
+
+
+        // 除了+ 以外 其它的算术运算符  比如 -  * /等  都会把数据  转为数字类型 
+        let num='12'- 10;  // 字符串  12  减去  数字 10 
+        // 减号  遇到字符串12   将它隐式转换为 数字值12  进行运算  12-10 =2 
+        console.log(num);// 2
+
+        //  转为  true 1 - false 0= 1
+        let num1=true-false;
+        console.log(num1);
+
+        let str1='你好'- 1;
+        console.log(str1);//NaN   非数字  
+     </script>
+</body>
+</html>

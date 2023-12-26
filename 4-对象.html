@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //  对象 比喻成  猫咪  
+        /*
+           银渐层小猫:  
+             名字: 元宵
+             品种: 银渐层 
+             年龄: 7个月 
+             爱吃: 鱼  猫粮  鸡胸肉等等 
+        */
+        //  定义变量 来接收 对象 
+        let  cat={
+            name:'元宵',
+            type:'银渐层',
+            age:7,
+            eat:['鱼','猫粮','鸡胸肉']
+        }
+
+        console.log(cat);
+
+        // 取值 从对象里面 那对应的值  
+        // 通过对象名.属性
+        console.log(cat.name);
+
+        // 大括号 取值  
+        console.log(cat['age']);
+        // 注意点 括号取值  属性一定要加引号 不加引号浏览器优先识别为变量 去查找  
+
+
+        let girlfriend={
+            name:'封夕',
+            age: 18,
+            phone: 123123
+        }
+
+        // console.log(girlfriend);
+
+        // 换对象名字   不叫封夕     通过等号 赋值修改   
+        girlfriend.name ='左手';
+        console.log(girlfriend);
+
+        // 新增  喜好  like  
+        girlfriend.like='看封夕写代码';
+        console.log(girlfriend);
+
+        // 删除对象属性   delete  
+        delete girlfriend.phone;
+        console.log(girlfriend);
+
+
+        //   for-in   循环是一种特殊的循环  用于 循环数组和对象  
+        for(let index in girlfriend){
+            // index循环对象里面 对应每一个 属性名  
+            // console.log(index);
+
+            console.log('属性名:'+ index + '----' + '值为:'+girlfriend[index]);
+
+            // let text=`当前属性为: ${index},值:${girlfriend[index]}`;
+            // console.log(text);
+
+        }
+     </script>
+</body>
+</html>

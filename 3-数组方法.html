@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法</title>
+</head>
+<body>
+    <script>
+        //  定义数组   
+        let arr=[11,22,33];
+        // push 在原本的数组里面 添加上新的数组项  
+        arr.push('马上就有跨年了','大家准备好了吗?');
+        console.log(arr);
+
+        // 添加在数组前面  
+        let food=['葡萄','苹果'];
+        console.log(food);
+        // unshift  在原本的数组前面插入新的数组项  
+        food.unshift('哈密瓜','西瓜','菠萝');
+        console.log(food);
+
+        let str=['华为','小米','OPPO','苹果'];
+        console.log(str);
+        // 删除数组 最后一项 pop()
+        console.log(str.pop());// 返回 你要删除的 苹果项 
+
+        // console.log(str);// 没有苹果 数组项   
+
+        // 删除数组 前面的数组项 shift()
+        console.log(str.shift());// 华为 
+        console.log(str);
+
+
+        // splice  万能方法  增删改  
+        let num=[1,2,33,44,55,66];
+        // console.log(num); 
+        // [1, 2, 33, 44, 55, 66]
+        num.splice(1,2,'搞好了没')
+        //第一个值   表示你从第几项开始裁剪    1
+        //第二个值    裁剪个数   2 
+        //第三个值  裁剪之后 新增进去新的值  
+        console.log(num); // [1, '搞好了没', 44, 55, 66]
+
+
+
+        // 裁剪数组  slice()  /截取对应的值     
+        let fruit=['葡萄','苹果','芒果','榴莲','哈密瓜'];
+        console.log(fruit);
+        // 下标为2 开始裁剪   
+        // console.log(fruit.slice(2));
+        // 下标为3 开始裁剪   
+        // console.log(fruit.slice(3));  
+
+        // 返回结果  '苹果','芒果'    数组下标为1开始裁剪  到下标为3 为止   不包含3的下标
+        console.log(fruit.slice(1,3)); 
+
+        // console.log(fruit);
+        // ['葡萄','苹果','芒果','榴莲','哈密瓜'];
+        // 0     1      2     3      4
+
+        // 数组转为字符串  
+        let array=[1,2,3];
+        console.log(array);
+        // 将数组 转为  字符串   返回字符串结果 
+        console.log(array.toString());
+
+        // join  转字符串 
+        console.log(array.join());
+
+        // 将数组 直接 逗号 去掉  
+        console.log(array.join(''));
+
+        console.log(array.join('!'));
+
+
+        // 数组颠倒  reverse
+        let num1=[1,2,3,4,5,6];
+        console.log(num1);
+        num1.reverse();
+        console.log(num1);
+
+        // 数组排序  sort()  参数是个函数方法  
+
+        let arr2=[1,7,5,66,88,888,333];
+        // 升序 从小到大 排列 
+        arr2.sort(function(a,b){
+            //  数组 从最小开始排序  一直到大  
+            return a - b;
+        }
+        )
+        console.log(arr2);//  [1, 5, 7, 66, 88, 333, 888]
+
+        // 降序  
+        arr2.sort(function(a,b){
+            //  数组 从最大开始排序 到小  
+            return b - a;
+        }
+        )
+        console.log(arr2);//  [888, 333, 88, 66, 7, 5, 1]
+    </script>
+</body>
+</html>
