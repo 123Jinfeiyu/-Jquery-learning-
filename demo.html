@@ -1,13 +1,66 @@
-<!doctype html>
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第二节课 演示案例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-        大家学会了吗? 学会了扣1
+    <script>
+        // let str = "我的" + 66666;
+        // console.log(str);// 我的66666
+
+        // let str = '封夕';
+        // let str1 = '明天谁请我吃冰激凌';
+        // let speak = "说:";
+
+        // console.log(str + speak + str1);
+
+        //在对象中取出并且打印出来 封夕 和 左手
+        let mm = {
+            name: "封夕",
+            age: 21,
+            marry: false,
+            friends: ["左手", "哈哈"]
+        };
+
+        console.log(mm.name);
+
+        // 先拿对象里面的数组  
+        console.log(mm.friends[0]);
+
+
+        //在数组中取出 封夕  和  小帅哥
+        let woman = ["封夕", "少年", "师兄", { name: "小帅哥" }];
+        console.log(woman);
+        // 打印 封夕
+        console.log(woman[0]);
+
+        // 数组里面放对象  
+        console.log(woman[3].name);
+
+
+        let str = {
+            name: '龙龙',
+        }
+        //将龙龙 修改为 多喝热水,并且添加个年龄age为21 
+        str.name = '多喝热水';
+        str.age = 21;
+        console.log(str);
+
+
+        let arr = ['绿色', '红色', '紫色', '蓝色', '给你点颜色看看'];
+        //用循环 将数组的每一项值打印出来 
+        
+        for(let item in arr){
+            // item 是数组里面每一项的下标
+            // console.log(item);
+
+            console.log('当前下标为'+item ,'数组项:' + arr[item]);
+        }
+    </script>
 </body>
+
 </html>

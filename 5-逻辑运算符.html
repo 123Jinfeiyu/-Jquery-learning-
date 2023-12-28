@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  与 && 
+        let str= 1>0 && 1<0;
+        // 1>0  true   
+        // 1<0  false 
+        // 判断 两边是否都是为真的  有一方是假那就是返回假  都是假 返回假 
+        console.log(str);// false
+
+
+
+        // 或 ||     true
+        let num=  1>2 || 1<0 || 4<5;
+        // || 必要有一个是真的  
+        console.log(num);
+
+        // 非 !
+        // let a=true;
+
+        // console.log(!a);//false
+        // a=false   false=非false(true)
+        let a=false;
+        // console.log(!a)// a=true
+
+        // console.log(a=a);// true=ture
+
+        // 真的等于 非真的   返回假  
+        // console.log(a = !a);// false
+        /*
+          在js中 这些值默认转为 false  
+          数字  NaN  
+          空 null
+          未定义  undefined  
+          数字0   
+          空字符串:  ''
+        */ 
+    </script>
+</body>
+</html>

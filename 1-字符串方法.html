@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法</title>
+</head>
+
+<body>
+    <script>
+        //字母转大小写  
+        let text = 'you';
+        // 字母转大写 text.toUpperCase()
+        console.log(text.toUpperCase());
+
+        // 字母转小写 toLowerCase()
+        let text1 = 'AABBcc';
+        console.log(text1.toLowerCase());
+
+
+        // 获取字符串   charAt()获取字符串  返回的是你去查找字符串下标 
+        let str = '马上就要过年了';
+        console.log(str.charAt(1));// 返回 字符串 '上'
+        // console.log(str.charAt(1));
+
+        // charCodeAt 获取字符串项  转为unicode编码
+        console.log(str.charCodeAt(0));// 39532  表示 字符串项 马
+
+
+        /*
+          indexOf 检索字符串项 
+          参数1: 你需要去查找对应字符 返回结果对应字符串下标 
+          参数2: 表示你从第几项开始查对应字符  
+        */
+        let str1 = '今年你收获到什么知识了吗?';
+        console.log(str1.indexOf('年'));// 1 
+        console.log(str1.indexOf('?'));//  12
+
+        let Text = '你快乐吗?我很快乐';
+        console.log(Text.indexOf('快乐', 2));
+
+
+
+        // 截取字符串   substring(开始,结束)
+        let speak = '今天晚上你努力吗?'
+        console.log(speak.substring(0, 4));// 今天晚上
+
+
+        // 简写 substr()  从下标为4开始截取 截取5个 
+        console.log(speak.substr(4, 5));//你努力吗?
+
+
+        //console.log(speak.substr(9,6));  超出长度去截取不会报错 得到是一个空内容 
+
+        // 替换 replace
+        let py='大宝贝,你好';
+        // replace 第一个值你需要修改的值  第二个你替换进去的新值  
+        console.log(py.replace('你好','封夕'));
+
+
+        // split  转字符串数组 
+        let obj='我可以改为数组,数组1,数组2';
+        // console.log(obj.split(''));
+
+        // 以逗号隔开 分为多个数组 
+        // console.log(obj.split(','));
+
+        console.log(obj.split('数组'));// 相当于 数组字符 切掉了
+
+        // match 满足正则格式
+        let num='123123';
+        console.log(num.match('1'));//
+
+        
+    </script>
+</body>
+
+</html>
