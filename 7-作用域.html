@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  作用域   变量名起作用的范围  
+        // 1.全局作用域
+        let a = 10;
+        console.log(a);
+
+        let fn = () => {
+            console.log(a);
+        }
+        fn();
+
+        // 2.局部作用域  在函数里面 创建一个变量 
+        function count() {
+            let str = '字符串你可以调用吗?'
+
+            return str;
+        }
+        count();
+        // 在函数里面 声明的变量 属于局部变量  只能在函数里面使用  外部是不能调用的    
+        // console.log(str);
+
+        // 3.块作用域     除了函数 花括号 {}   都是块作用域    比如 if判断  对象   
+        {
+            let x=1;
+            console.log(x);
+        }
+        // console.log(x);
+
+
+
+        //  变量在作用域情况下 是一层一层 找对应的值    
+        let  num=10;
+        {
+            let num=20;
+
+            function Num(){
+                // let num=30;
+                console.log(num);
+            }
+            Num();
+            // console.log(num);// 打印多少  结果是20    
+        }
+
+        // this指向  
+        console.log(this);// Window 浏览器
+
+
+
+        // 
+        let obj={
+            fn:function(){
+                console.log(this);
+            }
+        }
+        obj.fn();// obj   是对象调用了函数里面 this    
+        
+        // 函数的调用 都是指向 window  
+        function add(){
+            console.log(this);
+        }
+        add();// Window  
+    </script>
+</body>
+
+</html>

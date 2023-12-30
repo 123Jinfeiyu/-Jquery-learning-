@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入 外部js文件  -->
+    <script src="./demo.js"></script>
+</head>
+
+<body>
+    <script>
+        function fn(a, b) {
+            let sum = a + b;
+            // console.log(sum);
+            // 返回值  
+            return sum;
+
+            console.log('sum结果拿到了吗?');
+        }
+        // fn(10, 20);
+        // console.log(fn(10, 20));
+
+        // 定义个变量 来接收并打印 返回结果
+        let res=fn(10,20);
+        console.log(res);
+
+
+        // 匿名函数   省略函数名   维护代码不直观   不怎么使用 
+        (
+            function(a){
+                console.log(a);
+            }
+        )('过年了');
+
+
+
+        // 箭头函数  es6新增的语法    (形参)=>{函数体}
+        let ret=(str)=>{
+            console.log(str);
+        }
+        ret('箭头函数启动');
+
+
+        console.log(obj);
+    </script>
+</body>
+
+</html>
