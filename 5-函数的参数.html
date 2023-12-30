@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  函数参数分为  实参和形参
+
+
+        // 形参 定义定义函数名括号内  
+        function FX(name, age) {
+            console.log(name, age);
+        }
+
+        // 调用函数
+        FX('帅气封夕', 28);// 实参是书写在函数调用方法里面  实际的参数 
+
+        console.log(name);
+        /*
+          注意: 
+            函数里面的形参   运行结果       由实参决定  
+            函数里面的形参  外部是不能调用的  
+        */
+
+        // 计算 两个值相乘的和  
+        function add(x, y) {
+            let sum = x * y;
+            console.log(sum); //5000
+        }
+        add(100, 50);
+
+        // 打印1+2+3+4...+100的和  
+        // 初始和为0  
+        // let sum = 0;
+        // // 判断1-100  相加的和  
+        // for (let i = 1; i <= 100; i++) {
+        //     sum += i;
+        // }
+        // console.log(sum);// 总的和 5050     
+
+        // 100: 5050     200     300     400 
+
+
+        function add1(number) {
+            let sum = 0;
+            for (let i = 1; i <= number; i++) {
+                sum += i;
+            }
+            console.log(sum); 
+        }
+        add1(100);
+        add1(200);
+        add1(300);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  分支结构   if  switch  
+
+        // if判断语言 
+        // if (条件) {
+        //     // 条件成立 执行里面的代码 
+        // }
+
+        // 判断  1大于0  
+        if (1 > 0) {
+            // 条件成立就会去执行 {}花括号代码  
+            console.log('条件成立');
+        }
+
+        // 条件不成立  不会执行 {}
+        if (1 > 2) {
+            console.log('打印了没');
+        }
+
+        // 双分支   条件成立是  if{}里面语句  条件不成立时  打印else{}语句 
+        let num = 10 < 9;
+        if (num) {
+            console.log('条件成立');
+        } else {
+            console.log('条件不成立');
+        }
+
+
+        // 多分支   允许定义多个条件  
+        // if (条件1) {
+        //     // 满足条件1执行的代码
+        // } else if (条件2) {
+        //     // 满足条件2执行的代码
+        // }else if(条件3){
+        //     // 满足条件3执行的代码
+        // }else{
+        //     // 以上条件都不满足 则执行 
+        // }
+
+
+        // 小王 找 小刘 去告白    条件1: 小王现在身上有2000块钱  那我就同意     告白失败: 没有2000
+        // 条件2  虽然没有2000 但是你只要有上进心 大于1000 那我就考虑考虑  
+        let money=1999;
+        if(money >=2000){
+          console.log('告白成功');
+        }else  if(money>=1000){
+          console.log('我考虑考虑,等你在努力一下');
+        }else{
+            console.log('失败了继续努力');
+        }
+    </script>
+</body>
+
+</html>

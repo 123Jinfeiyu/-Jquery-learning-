@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 循环代码块  打印5次   
+        // for (let i = 1; i <= 5; i++) {
+        //     console.log(i);
+        // }
+        // for (初始条件; 结束条件; 递增) {
+        //     循环代码
+        // }
+
+
+        // while循环  
+        /*
+          定义循环变量  
+
+          while(循环条件){
+            条件满足时执行代码;
+            递增;
+          }
+
+        //   先判断 在循环    
+        */
+        let num = 10;
+        while (num < 100) {
+            // console.log(num);
+            // 递增 
+            num++;
+        }
+
+
+        // do-while  先执行一次  然后在进行判断  在循环  
+        // let sum = 1;
+        // do {
+        //     console.log(sum);
+        //     sum++;
+        // } while (sum > 50);// 表达式为真  重复执行递加    为假只打印  do里面的语句内容 不会继续递加了    
+
+
+
+        // 控制循环  
+        // 1.break  强制结束循环
+
+        // 从1-100里面 找到能被  14整数的数    打印出来 ()  
+        for(let j=1;j<=100;j++){
+            // console.log(j);
+
+            //判断1-100里面 能被14整数    
+            // 条件: j % 14 == 0
+            if(j % 14 == 0  && j !=14){
+            //    console.log(j);
+               break;// 终止循环  
+            }
+        }
+
+
+        // 1-30 里面 谁是偶数  
+        for(let x=1;x<=30;x++){
+            // 判断这个数是否为偶数  
+            if (x % 2 == 0) {
+                // console.log(x);// x打印偶数 
+                
+                //如果是偶数 我就不打印   跳过 执行下一个循环   
+                continue; //结束当前循环  执行下一次循环 
+            }
+            console.log(x);//打印奇数 
+        }
+    </script>
+</body>
+
+</html>
