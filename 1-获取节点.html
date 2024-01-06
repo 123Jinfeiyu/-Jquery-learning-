@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        盒子
+    </div>
+
+    <p id="text">
+        文本段落标签
+    </p>
+
+    <ul>
+        <li>张飞</li>
+        <li>李白</li>
+        <li>刘备</li>
+    </ul>
+
+
+    <div class="wrap">
+        大盒子容器1
+    </div>
+
+    <div class="wrap">
+        大盒子容器2
+    </div>
+    <script>
+        // document  全局对象  
+        console.log(document);
+
+        //获取节点 
+        // 通过类名来获取对应的元素   通过类名来获取对应的元素: getElementsByClassName
+        let box = document.getElementsByClassName('box');
+        console.log(box);
+
+        // 通过id来获取对应的元素  
+        let Txt = document.getElementById('text');
+        console.log(Txt);
+
+        // 通过标签名来获取   (li标签)
+        let list = document.getElementsByTagName('li');
+        console.log(list);// 拿到结果是一个集合   
+
+        // 拿到第一个li标签  
+        // console.log(list[0]);
+
+
+        // 我想看到每一个 li  循环打印  
+        for (let i = 0; i < list.length; i++) {
+            console.log(list[i]);
+        }
+
+        // let warp1=document.getElementsByClassName('wrap');
+        // console.log(warp1);// 打印获取对应类名的数组  
+
+        // querySelector  通过css选择器来获取对应的元素  
+        let wrap = document.querySelector('.wrap');
+        console.log(wrap);// 如果页面中出现相同符合条件的元素 那也一样只打印第一个符合条件的  
+
+        // 获取多个相同元素   集合(数组)  
+        let wrap2=document.querySelectorAll('.wrap');
+        console.log(wrap2);
+
+
+    </script>
+</body>
+
+</html>

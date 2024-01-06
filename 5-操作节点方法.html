@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <span>大家最近新的一年收获怎么样?</span>
+    </div>
+    <script>
+        /*
+          动态操作页面节点   
+          1.创建节点 
+          2.添加节点
+          3.删除节点 
+          4.替换节点 
+        */
+        //    获取 box元素  
+        let box = document.querySelector('.box');
+
+        // 1.创建节点  新节点  document.createElement()
+        let newP = document.createElement('p');
+        // 在新增节点内容 插入文本 
+        newP.innerHTML = '这个是新增的节点';
+
+        // 2.添加节点 appendChild 
+        box.appendChild(newP);
+
+        // 3.在你新增的节点里面 插入内容 
+        // let text=document.createTextNode('周末去哪里');
+        // newP.appendChild(text)
+
+        // 获取子节点   children元素  
+        console.log(box.children);
+        console.log(box.children[0]);
+
+        // 删除节点 
+        // box.removeChild(box.children[0]);
+
+
+        // 替换节点     找到第一项子元素 替换成新增的内容节点   
+        let tit = document.createElement('h2');
+        // 插入文字 
+        tit.innerHTML = '新年快乐!';
+        // 替换节点  replaceChild(新的值,被替换的值)
+        box.replaceChild(tit,box.children[0]);
+
+    </script>
+</body>
+
+</html>

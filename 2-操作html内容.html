@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="box">
+          文字
+     </div>
+     <script>
+        // 获取元素  
+        let box=document.querySelector('.box');
+        // .innerHTML  文本内容 
+        // console.log(box.innerHTML);
+
+        // 修改 赋值操作 
+        // box.innerHTML='大家最近都复习了吗?';
+
+        // 赋值修改替换
+        // box.innerHTML +='感觉大家都忘记了';
+
+        //插入个标签innerHTML会解析标签  
+        // box.innerHTML+='<a href="https://www.baidu.com/">超链接标签</a>'
+
+        box.innerHTML='<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5d88a972-1b34-43ed-8b3a-4a7ebbb900a1%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1706962895&t=682f9578180bbef65b88168f0f466979"> '
+
+        // innerText  不会解析标签 
+        // box.innerText+='<a href="https://www.baidu.com/">超链接标签</a>'
+     </script>
+</body>
+</html>

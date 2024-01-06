@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <img src="./1.webp" alt=""  width="500" title="123" class="pic" id="box">
+
+       <script>
+        // 获取对应标签元素  
+        let pic=document.querySelector('.pic');
+        // console.log(pic);
+        // 获取标签对应的类名   className 
+        // console.log(pic.class);//undefined  class是关键字 拿不到的  
+
+        // className这个才是获取对应的类名操作  
+        console.log(pic.className);
+
+        // 获取id名   
+        console.log(pic.id);
+
+        // 图片title描述 
+        console.log(pic.title);
+
+        // 标签中自带的属性都可以合理的获取到  (id  title  src   alt  class(className)等)
+
+        // 赋值修改 图片src属性 
+        pic.src='./2.webp';
+        
+       </script>
+</body>
+</html>

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>网易云音乐</title>
-		<link rel="stylesheet" type="text/css" href="./reset.css" />
-		<link rel="stylesheet" type="text/css" href="./zuoye.css" />
-	</head>
+<html lang="en">
 
-	<body>
-		<div class="zy">
-			<!-- 头部 -->
-			<div class="header">
-				<!-- 网易云logo -->
-				<div class="component"></div>
-				<div class="component1">
-					<ul class="user-list">
-						<li><a href="#">发现音乐</a></li>
-						<li><a href="#">我的音乐</a></li>
-						<li><a href="#">关注</a></li>
-						<li><a href="#">商城</a></li>
-						<li><a href="#">音乐人</a></li>
-						<li><a href="#">下载客户端</a></li>
-						<li class="hot"></li>
-					</ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-				</div>
-			</div>
-		</div>
+<body>
+    <script>
+        //在外层定义相乘的和     i * j =sum  
+        let sum = '';
 
-	</body>
+        for (let i = 1; i <= 9; i++) {
+            // console.log(i);
+            // 在悬停另外一个  
+            for (let j = 1; j <= i; j++) {
+                // console.log(i, j);
+                // i * j 等于  1 * 1 = i * j
+                // console.log(i + '*' + j + '='  +  i *  j );
+
+                sum+= i + '*' + j + '='  +  i *  j + ' ' ;
+            }
+            // 换行符  
+            sum+='\n';
+            // console.log(sum);
+        }
+        console.log(sum);
+    </script>
+</body>
+
 </html>

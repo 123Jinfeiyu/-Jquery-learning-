@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+     <div class="wrap">
+         盒子
+     </div>
+
+
+     <button>按钮</button>
+     <script>
+        //  鼠标移入事件   
+        let warp=document.querySelector('.wrap');
+
+        // 鼠标移入事件
+        warp.onmouseover = function(){
+            //  console.log('鼠标进来了');
+        }
+
+        // 移出  
+        warp.onmouseout = function(){
+            //  console.log('鼠标出来了');
+        }
+
+        // 点击事件   
+        warp.onclick=function(){
+            // console.log(1);
+            // 修改背景颜色  改为绿色
+            // warp.style.backgroundColor='green';
+
+            // 不显示  
+            warp.style.display='none'
+        }
+     </script>
+</body>
+</html>

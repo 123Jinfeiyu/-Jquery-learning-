@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+
+        .text{
+            font-size: 25px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="tit1">听说过年除夕不放假真的假的</h1>
+
+
+    <div class="box text1 text">
+         我是box盒子
+    </div>
+    <script>
+        let title = document.querySelector('.tit1');
+        //修改文字颜色 
+        // 元素节点.style样式.css属性='属性值'
+        title.style.color='red';
+
+        // 修改文字大小 (-连接符  在js理解成 减号  )
+        title.style.fontSize='35px';
+        // css属性包含连接符(-) 在js中 删除掉 改为小驼峰命名 
+
+        // 添加个宽度  
+        title.style.width='300px';
+
+        // 背景颜色    background-color  去掉  - 然后把第二个单词首字母大写
+        title.style.backgroundColor='pink';
+
+
+        // 类名操作  
+        let box=document.querySelector('.box');
+        // 使用className 赋值改为 warp  比较麻烦  会把原本类名 给替换掉
+        // box.className='wrap';
+
+        // 添加类名    
+        // classList来操作类名
+        
+        // 添加类名
+        box.classList.add('wrap');
+
+        // 删除类名 remove
+        box.classList.remove('text1');
+
+
+        // (有则删  无则加)  没有就添加这个类名  toggle()  适用于简单的开关  
+        box.classList.toggle('text')
+
+    </script>
+</body>
+
+</html>
