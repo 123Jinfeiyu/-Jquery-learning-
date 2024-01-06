@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="box">
+
+     </div>
+     <script>
+        // 定时器  
+        
+        function fn(){
+            console.log('代码执行');
+        }
+        // fn();
+        // 一次性定时器   setTimeout(回调函数,延迟时间)   
+        // 时间单位毫秒  1秒=1000毫秒  
+        // setTimeout(fn,3000);
+
+        // 循环多次 定时器 
+        // setInterval(fn,3000);
+
+        let box=document.querySelector('.box');
+
+        let sum=0;
+        
+        function add(){
+            // 创建新节点
+            let item=document.createElement('p');
+            item.innerHTML='你好文本'+sum;
+            box.appendChild(item);
+            // sum+1  
+            // 升级一下  判断代码执行10次 我就清除定时器 
+            // 使用清除定时器方法  clearInterval(定时变量);
+            sum++;
+            if(sum == 10){
+                // 清除定时器
+                clearInterval(time);
+            }
+
+        }
+        // 定时器  循环一直插入 
+        let time =setInterval(add,3000);
+    
+        
+     </script>
+</body>
+</html>

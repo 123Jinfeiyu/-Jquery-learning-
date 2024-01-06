@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="box">盒子</div>
+    <ul class="list">
+        <li>第1个li子标签</li>
+        <li>第2个li子标签</li>
+        <li>第3个li子标签</li>
+        <li>第4个li子标签</li>
+        <li>第5个li子标签</li>
+    </ul>
+
+    <p class="text">
+
+    </p>
+
+    <input type="text"  value="11111111">
+    <script>
+        //jquery 是js里面一个工具库   
+        //jquery在线包  https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js
+
+
+        //使用jquery 工厂函数 $()
+         console.log($('.box'));  //返回jquery对象
+        //  转为原生js对象
+        // let box=$('.box')[0];
+        // console.log(box);
+
+        // 自带 .get(0);
+        // let box=$('.box').get(0);
+        // console.log(box);
+
+        
+        // 子级选择器 
+        let item=$('.list>li').get(4);
+        console.log(item);
+
+        // 操作元素  .html()  等价于 原生js写法 innerHTML方法
+        // console.log($('.box').html());
+
+        console.log($('.box').html('<a>超链接</a>'));
+        
+
+        // text  获取文本内容 
+        $('.text').text('我是新增的文本');
+
+
+        console.log($('input').val());
+    </script>
+</body>
+
+</html>

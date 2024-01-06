@@ -1,109 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./reset.css">
-    <style>
-         .cate-box{
-            /* 怪异盒 */
-            box-sizing: border-box;
-            width: 330px;
-            height: 350px;
-            border: 1px solid #ccc;
-            margin: 100px auto;
-            padding: 10px;
-         }
-
-         /* 标题 */
-         .title{
-            color: brown;
-            /* 底部边框 */
-            border-bottom: 1px solid orange;
-            /* 底部内边距 */
-            /* padding-bottom: 10px; */
-            /* 行高 */
-            line-height: 40px;
-         }
-         .title>span{
-            color: #ddd;
-         }
-
-         /* 美食列表 */
-         .food-list{
-            width: 100%;
-            height: 280px;
-            /* background-color: pink; */
-            margin-top: 10px;
-            /* 背景精灵图 */
-            /* background-image: url(./作业精灵图.png); */
-            /* 背景不平铺 */
-            /* background-repeat: no-repeat; */
-            /* 背景位置  */
-            /* background-position: 5px 10px; */
-         }
-         .food-list>li{
-            /* 文字缩进 */
-            text-indent: 40px;
-            /* 行高 */
-            line-height: 40px;
-            /* 背景样式  */
-            background: url(./作业精灵图.png) no-repeat 5px 12px;
-            /* 文本不换行显示  */
-            white-space: nowrap;
-            /* 溢出隐藏 */
-            overflow: hidden; 
-            /* 变为省略号 */
-            text-overflow: ellipsis;
-         }
-
-         /* 序号为2 的精灵图显示位置  */
-         .food-list>.list2{
-            background-position: 5px -18px;
-         }
-
-         /* 序号3 */
-         .food-list>.list3{
-            /*  x轴   y轴 -48 */
-            background-position: 5px -48px;
-         }
-
-         /* 序号 4 */
-         .food-list>.list4{
-            background-position: 5px -78px;
-         }
-
-         /* 序号 5 */
-         .food-list>.list5{
-            background-position: 5px -108px;
-         }
-         /* 序号 6 */
-         .food-list>.list6{
-            background-position: 5px -138px;
-         }
-         /* 序号 7 */
-         .food-list>.list7{
-            background-position: 5px -168px;
-         }
-    </style>
 </head>
+
 <body>
-     <div class="cate-box">
-          <!-- 美食排行 -->
-          <h3 class="title">
-             美食排行 <span>Food Ranking</span>
-          </h3>
-          <!-- 美食排行 -->
-          <ul class="food-list">
-             <li>美味大龙虾,可口大闸蟹</li>
-             <li class="list2">重庆火锅辣的很但是贼香 超级好吃还想吃</li>
-             <li class="list3">好吃麻辣烫又麻又烫 超级好吃还想吃</li>
-             <li class="list4">重庆火锅辣的很但是贼香 超级好吃还想吃</li>
-             <li class="list5">重庆火锅辣的很但是贼香 超级好吃还想吃</li>
-             <li class="list6">重庆火锅辣的很但是贼香 超级好吃还想吃</li>
-             <li class="list7">重庆火锅辣的很但是贼香 超级好吃还想吃</li>
-          </ul>
-     </div> 
+    <button class="btn">点我插入文本</button>
+
+    <!--我点击之后的标签 插入的盒子  -->
+    <div class="box">
+
+    </div>
+    <script>
+        //点击按钮 生成10个标签 (p)
+        let btn = document.querySelector('.btn');
+        let box = document.querySelector('.box');
+        let a=0;
+
+        btn.onclick = function () {
+            a++;
+            //console.log(1);
+            //给box盒子插入10个p标签
+            //1.创建标签 
+            // let newp=document.createElement('p');
+            // //2.创建新节点插入文本
+            // newp.innerHTML='我是生成的p标签';
+            // //3.给box盒子去添加新节点 
+            // box.appendChild(newp); 
+
+            // 判断  定义一个初始化值  
+            if (a == 1) {
+                for (let i = 1; i <= 10; i++) {
+                    //1.创建标签 
+                    let newp = document.createElement('p');
+                    //2.创建新节点插入文本
+                    newp.innerHTML = '我是生成的p标签' + i;
+                    //3.给box盒子去添加新节点 
+                    box.appendChild(newp);
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //Math 数学对象方法   例如数学常数  π等等
+         console.log(Math);
+
+        //  圆周率
+        console.log(Math.PI);
+
+        // abs() 函数返回你指定的值 绝对值  
+        console.log(Math.abs(-99));//  99 绝对值 只能是正数  
+
+        console.log(Math.abs('封夕'));// NaN  
+        console.log(Math.abs(null));// null在js表示 0
+        console.log(Math.abs(true));//  1
+
+        // 随机数  取值(0~1值)
+        console.log(Math.random());
+
+        // 0~100随机数  
+        let num=Math.random()*100;
+        console.log(num);
+
+        // 取整数  
+        console.log(parseInt(num));
+
+        // 四舍五入  
+        // console.log(Math.round(11.5));//  12
+        // console.log(Math.round(11.4));
+
+        // console.log(Math.round(-22.6));  // -22  正数才是23   负数 -22 
+
+        // 向上取整
+        console.log(Math.ceil(31.1));  // 32
+
+        // 向下取整 舍去后面的小数 
+        console.log(Math.floor(11.9));// 11
+
+        // 负数 向下取整   相反   相当于回退一位     
+        console.log(Math.floor(-13.1));// -14 
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="time"></h2>
+    <script>
+        // 创建日期对象  
+        // let date=new Date();
+        // console.log(date);// 获取本地时间  
+
+        // // 获取年份  
+        // console.log(date.getFullYear());
+        // // 月份 (0~11)  这里月份+1
+        // console.log(date.getMonth()+1);
+        // // 日期 (1~31)
+        // console.log(date.getDate());
+        // // 获取一周第几天  (0~6)   0表示星期天     6表示星期六  
+        // console.log(date.getDay());
+        // // 小时
+        // console.log(date.getHours());
+        // // 分钟
+        // console.log(date.getMinutes());
+        // // 秒
+        // console.log(date.getSeconds());
+
+
+        function currentTime() {
+            let date = new Date();
+            let time = document.querySelector('.time');
+
+            //获取年份  
+            let YY = date.getFullYear();
+            // 月份
+            let Month = date.getMonth()+1;
+            // 日期  
+            let DD=date.getDate();
+            //小时 
+            let HH=date.getHours();
+            // 分
+            let MM=date.getMinutes();
+            // 秒
+            let SS=date.getSeconds();
+
+            // 插入标签
+            time.innerHTML=`当前时间为:${YY}年${Month}月${DD}日,${HH}时${MM}分${SS}秒`
+        }
+        // currentTime();
+        
+        // 定时器
+        setInterval(currentTime,1000);
+    </script>
+</body>
+
+</html>
