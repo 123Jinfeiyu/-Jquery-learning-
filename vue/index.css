@@ -1,5 +1,7 @@
 #nav {
+    /* 设置覆盖显示的层级 */
     z-index: 9999;
+    /* 固定导航条 */
     position: fixed;
     top: 0px;
     width: 100%;
@@ -24,7 +26,9 @@
     text-align: center;
     line-height: 60px;
     color: #fff;
+    /* 字体间隔 */
     letter-spacing: 2px;
+    /* 字体类型 */
     font-family: '宋体';
 }
 
@@ -37,6 +41,7 @@
 }
 
 .nav-list>li {
+    /* 浮动排版水平 */
     float: left;
     width: 90px;
     height: 60px;
@@ -88,6 +93,7 @@
     font-size: 1.8em;
 }
 .roll-box{
+    /* 相对定位以离他最近的h2作为参照物 */
     position: relative;
     top: 165px;
     width: 35px;
@@ -97,6 +103,7 @@
     border-radius: 15px;
 }
 .roll-box>span{
+    /* 参照物是它的父容器 */
     position: absolute;
     top: 45px;
     left: 13px;
@@ -107,6 +114,7 @@
     /* 动画属性  动画名  动画时间 */
     animation: move 2s infinite;
 }
+/* 也可以从上往下把top值对调就行了 */
 @keyframes move{
     100%{
         top: 0px;
@@ -127,4 +135,56 @@
     background-color: #fff;
     border-radius: 10px;
     margin: auto;
+}
+.author-wrap>h1{
+    position: absolute;
+    top: 44px;
+    left: 48px;
+    font-size: larger;
+    font-style: normal;
+    color: rgb(0,138,189);
+}
+.author-wrap>span{
+    position: relative;
+    top: 130px;
+    left: 53px;
+    border: red;
+}
+.author-wrap>span>p{
+    font-style: normal;
+    font-family: '楷体';
+    color: rgb(0,138,189);
+}
+.img-rad{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    top: 50px;
+    margin-left: 450px;
+    /* border: red solid 2px; */
+}
+.img-rad>img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    /* margin-left: 0%; */
+    /* border: gray 2px; */
+}
+.img-rad2{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    top: 50px;
+    margin-left: 852px;
+    /* border: red solid 2px; */
+}
+.img-rad2>img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    /* margin-left: 0%; */
+    /* border: gray 2px; */
 }
