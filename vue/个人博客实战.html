@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入清除默认样式 -->
+    <link rel="stylesheet" href="./reset.css">
+    <!-- 引入vue.js  -->
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <div id="nav">
+        <div class="nav-conten">
+            <!-- logo -->
+            <a href="" class="logo" v-html="logoTit"></a>
+            <!-- 导航列表 -->
+            <!-- 通过vue.js  v-for循环 -->
+            <ul class="nav-list">
+                <li v-for="(item,index) in Array">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="home">
+        <!-- 背景视频  
+            自动播放属性 autoplay 
+            视频禁音 muted
+            无限播放 loop
+            视频控制面板  controls
+        -->
+        <video src="./素材/海.mp4" autoplay muted loop class="fx-video"></video>
+        <!-- <video controls src="https://v26-web.douyinvod.com/b4db70814c5a73efd94023f6777286cf/659d5546/video/tos/cn/tos-cn-ve-15/ooeQJjZSAndnmNA6fw80ghID9AqHgVbbArBlnT/?a=6383&ch=5&cr=3&dr=0&lr=all&cd=0%7C0%7C0%7C3&cv=1&br=809&bt=809&cs=0&ds=6&ft=bvTKJbQQqU-mfJ4ZPo0OqY8hFgpiWVSZejKJy8eFAG0P3-I&mime_type=video_mp4&qs=1&rc=OzplODU3aTtnZDhlZGk4aUBpM2ZmbGQ6ZnBtcDMzNGkzM0BeMi9gXjRgXmAxX14zLTMuYSNwLV5rcjRvZGJgLS1kLWFzcw%3D%3D&btag=e00028000&dy_q=1704805978&feature_id=46a7bb47b4fd1280f3d3825bf2b29388&l=202401092112578BB7FA8DC01FB8113F12"></video> -->
+        <!-- 内容标题 -->
+        <div class="hom-content">
+            <h2>Welcome to my world</h2>
+            <h1>只有多练习,才能掌握好知识</h1>
+            <!-- 滚动动画 -->
+            <div class="roll-box">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- 个人介绍模块 -->
+    <div id="author">
+        <div class="author-wrap">
+            <!-- 个人介绍 -->
+            <div class="introduce-box">
+                <h2>个人简介</h2>
+                <p>技术圈中的陈冠希,旅居中国湖南长沙</p>
+                <p>掌握:html+css+js 熟悉各大前后端框架</p>
+                <p>南昌航空大学>上海>红细胞</p>
+            </div>
+            <!-- 头像 -->
+            <img src="./素材/img/1.jpeg" alt="" class="pic">
+            <!-- 二维码名片 -->
+            <div class="card-box">
+                <img src="./素材/img/二维码.png" alt="">
+                <p class="card-text">联系作者</p>
+            </div>
+        </div>
+    </div>
+    <!-- 旅行模块  -->
+    <div id="travel">
+        <!-- 旅行内容 -->
+        <div class="travel-wrap">
+            <!-- 探索标题 -->
+            <div class="explore-title">
+                <div class="explore-left">
+                    <h2>Explore the world</h2>
+                    <p>探索世界</p>
+                </div>
+                <button class="explore-right">分享更多&gt;</button>
+            </div>
+            <!-- 旅行图片 -->
+            <ul class="travel-list">
+                <li>
+                    <img src="./素材/img/1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/2.jpg" alt="">
+                </li>
+
+                <li>
+                    <img src="./素材/img/3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/5.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/6.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/7.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./素材/img/8.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 精通模块 -->
+    <div id="master">
+        <ul class="master-wrap">
+            <li>
+                <div class="master-box">
+                    <h3>Python</h3>
+                    <p>90%</p>
+                </div>
+            </li>
+            <li class="only">
+                <div class="master-box">
+                    <h3>html+css</h3>
+                    <p>80%</p>
+                </div>
+            </li>
+            <li class="only">
+                <div class="master-box">
+                    <h3>JavaScrip</h3>
+                    <p>70%</p>
+                </div>
+            </li>
+            <li class="only">
+                <div class="master-box">
+                    <h3>爬虫</h3>
+                    <p>99%</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 日志模块 -->
+    <div class="journal">
+        <div class="journal-wrap">
+            <!-- 标题 -->
+            <h2 class="journal-tit">
+                Journal-旅行
+            </h2>
+            <!-- 日志列表 -->
+            <ul class="journal-list">
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+                <li>
+                    <!--图像标签 html5新特性 新增结构标签  专门用来放图片  -->
+                    <figure class="pic-img">
+                        <img src="./素材/img/10.png" alt="">
+                    </figure>
+                    <div class="journal-text">
+                        <p>感想</p>
+                        <h2>成为努力的人</h2>
+                        <p>香菜 时间:<span class="time"></span> 评论:16</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="all-box">查看全部</button>
+        </div>
+    </div>
+
+    <!-- 留言模块 -->
+    <div class="footer">
+        <div class="footer-wrap">
+            <p>留言</p>
+            <!-- 表单区域 -->
+            <form action="" class="message-box">
+                <!-- 输入内容区域 -->
+                <div class="message">
+                    <input type="text" placeholder="昵称">
+                    <input type="text" placeholder="邮箱">
+                    <input type="text" placeholder="你想写什么">
+                </div>
+                <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                <button>提交</button>
+            </form>
+        </div>
+    </div>
+    <!-- 引入外部js效果  -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
