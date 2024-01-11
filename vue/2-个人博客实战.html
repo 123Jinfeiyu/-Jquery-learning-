@@ -19,10 +19,12 @@
     <div id="nav">
         <div class="nav-conten">
             <!-- logo -->
+            <!-- 如果为我们的a链接绑定我们的图片可以使用v-html="pic" -->
             <a href="" class="logo" v-html="logoTit"></a>
             <!-- 导航列表 -->
             <!-- 通过vue.js  v-for循环 -->
             <ul class="nav-list">
+                <!-- 相当于ul>li*6 这里不去打印下标index-->
                  <li v-for="(item,index) in Array">
                     {{item}}
                  </li>
@@ -52,12 +54,20 @@
     <!-- 个人介绍模块 -->
     <div id="author">
       <div class="author-wrap">
-
-      </div>
+      <h1>个人简介</h1>
+      <span>
+        <p>技术圈中的陈冠希,旅居中国湖南长沙<br><br><br>
+         掌握:html+css+js,熟悉各大前后端框架<br><br><br>
+         南昌大学>上海大学>红细胞
+        </p>
+      </span>  
+     <div class="img-rad"><img src="./素材/img/1.jpeg"/></div> 
+     <div class="img-rad2"><img src="./素材/img/二维码.png"/></div> 
+    </div>
     </div>
     <!--  -->
 
-    <!-- 引入外部js效果  -->
+    <!-- 引入外部js效果  代码是从上往下运行了，先加载页面的元素再进行我们vue/js的操作-->
     <script src="./index.js"></script>
 </body>
 
