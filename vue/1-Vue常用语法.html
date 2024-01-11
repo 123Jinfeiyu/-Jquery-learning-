@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 第一步 导入vue.js文件 -->
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第三步  把vue内容 渲染给页面中显示   插值 -->
+    <div id="app">
+        {{message}}
+
+        <!-- v-html  -->
+        <p v-html="age"></p>
+
+        <!-- v-html 接收一个标签对象  -->
+        <p v-html="text"></p>
+
+
+        <!-- v-text绑定值   只能传文本 -->
+        <div v-text="text">
+
+        </div>
+
+        <!-- 双向绑定 v-model  -->
+        <input type="text" v-model="userName" placeholder="请输入....">
+        <!-- 绑定对应值 -->
+        <h2>{{userName}}+{{age}}</h2>
+
+        <!-- v-on 事件绑定  -->
+        <button v-on:click="fn">点击事件1</button>
+        <!-- 简化点击事件   -->
+        <button @click="fn1">点击事件2</button>
+
+        <!-- 
+            v-for循环  
+            item: 属性值
+            key: 属性名
+            index: 下标
+            
+        -->
+        <p v-for="(item,key,index) in obj">
+            {{item}}
+            {{key}}
+            {{index}}
+        </p>
+
+        <!-- <button  @click="taggle">点我</button> -->
+        <!-- <img src="./1.webp" alt=""  v-show="show"> -->
+        <!-- <img src="./1.webp" alt=""  v-show="show" > -->
+        
+        <!-- <button @click="taggle" >点我</button> -->
+        <img src="./1.webp" alt="" v-if="10<9">
+    </div>
+    <script>
+        //第二步 创建vue实例化对象
+        let app = new Vue({
+            // 
+            el: '#app',
+            //挂载的对象实例
+            // 2.0
+            //    data:{
+            //   message:'封夕真的好帅!',
+            //   age: 28,
+            //   text:'<a>超链接</a>',
+            //   userName:'',
+            //   fn:function(){
+            //     alert('是你点击我吗?')
+            //   }
+            //    }
+
+            // 2.5版本  国内稳定版    
+            data() {
+                return {
+                    message: '封夕真的好帅!',
+                    age: 28,
+                    text: '<a>超链接</a>',
+                    userName: '',
+                    fn: function () {
+                        alert('是你点击我吗?')
+                    },
+                    fn1:function(){
+                        alert('简化写法')
+                    },
+                    obj:{
+                        name:'左手',
+                        age:29,
+                        like:'游戏'
+                    },
+                    // 初始值默认为图片显示 
+                    show: false,
+                    // 点击直接图片不显示
+                    taggle: function(){
+                        // console.log(1);
+                        // 取反  比如原本是真的  点击之后变假的
+                        // this.show = !this.show;
+                    }
+                    
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

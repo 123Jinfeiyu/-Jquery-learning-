@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入清除默认样式 -->
+    <link rel="stylesheet" href="./reset.css">
+    <!-- 引入vue.js  -->
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <div id="nav">
+        <div class="nav-conten">
+            <!-- logo -->
+            <a href="" class="logo" v-html="logoTit"></a>
+            <!-- 导航列表 -->
+            <!-- 通过vue.js  v-for循环 -->
+            <ul class="nav-list">
+                 <li v-for="(item,index) in Array">
+                    {{item}}
+                 </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="home">
+        <!-- 背景视频  
+            自动播放属性 autoplay 
+            视频禁音 muted
+            无限播放 loop
+            视频控制面板  controls
+        -->
+         <video src="./素材/海.mp4"   autoplay muted loop class="fx-video"></video>
+       <!-- <video controls src="https://v26-web.douyinvod.com/b4db70814c5a73efd94023f6777286cf/659d5546/video/tos/cn/tos-cn-ve-15/ooeQJjZSAndnmNA6fw80ghID9AqHgVbbArBlnT/?a=6383&ch=5&cr=3&dr=0&lr=all&cd=0%7C0%7C0%7C3&cv=1&br=809&bt=809&cs=0&ds=6&ft=bvTKJbQQqU-mfJ4ZPo0OqY8hFgpiWVSZejKJy8eFAG0P3-I&mime_type=video_mp4&qs=1&rc=OzplODU3aTtnZDhlZGk4aUBpM2ZmbGQ6ZnBtcDMzNGkzM0BeMi9gXjRgXmAxX14zLTMuYSNwLV5rcjRvZGJgLS1kLWFzcw%3D%3D&btag=e00028000&dy_q=1704805978&feature_id=46a7bb47b4fd1280f3d3825bf2b29388&l=202401092112578BB7FA8DC01FB8113F12"></video> -->
+         <!-- 内容标题 -->
+         <div class="hom-content">
+            <h2>Welcome to my world</h2>
+            <h1>只有多练习,才能掌握好知识</h1>
+            <!-- 滚动动画 -->
+            <div class="roll-box">
+                <span></span>
+            </div>
+         </div>
+    </div>
+    <!-- 个人介绍模块 -->
+    <div id="author">
+      <div class="author-wrap">
+
+      </div>
+    </div>
+    <!--  -->
+
+    <!-- 引入外部js效果  -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
