@@ -299,3 +299,28 @@ console.log(new Date(2021,8,26,12,31,24));
 6. getMinutes() 返回分钟
 7. getSeconds() 返回秒
 8. getDay() 返回星期
+9. javascript 生成img标签的3种方式（对象、方法、html）
+javascript
+<div id="d1"></div>
+<script>
+//HTML
+function a(){
+document.getElementById("d1").innerHTML="<img src='http://baike.baidu.com/cms/rc/240x112dierzhou.jpg'>";
+}
+a();
+//方法
+function b(){
+var d1=document.getElementById("d1");
+var img=document.createElement("img");
+img.src="http://baike.baidu.com/cms/rc/240x112dierzhou.jpg";
+d1.appendChild(img);
+}
+b();
+//对象
+function c(){
+var cc=new Image();
+cc.src="http://baike.baidu.com/cms/rc/240x112dierzhou.jpg";
+document.getElementById("d1").appendChild(cc);
+}
+c();
+</script>
