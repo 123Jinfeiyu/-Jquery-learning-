@@ -324,3 +324,6 @@ document.getElementById("d1").appendChild(cc);
 }
 c();
 </script>
+'''
+为了确保 JavaScript 在 HTML 解析完成后执行，你可以将 <script> 标签放在 <body> 元素的最后。
+'''
