@@ -1,0 +1,140 @@
+.bg-img {
+	  /* 使用的图像 */
+	  background-image: url("images/2.jpg");
+	
+	  min-height: 680px;
+	
+	  /* 居中并很好地缩放图像 */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	
+	  /* 需要定位导航栏 */
+	  position: relative;
+	}
+	
+	/* 将导航栏容器定位在图像内 */
+	.container {
+	  position: absolute;
+	  margin: 20px;
+	  width: auto;
+	}
+	
+	/* 导航栏 */
+	.topnav {
+	  overflow: hidden;
+	  background-color: #333;
+	  margin-top: -37px;
+	  margin-left: 334px;
+	  width: 780px;
+	  height: 60px;
+	}
+	
+	/* 导航栏链接 */
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	/* 为 sidenav 内的链接设置样式 */
+	#mySidenav a {
+	  position: absolute; /* 相对于浏览器窗口定位它们 */
+	  left: -80px; /* 将它们放在屏幕之外 */
+	  transition: 0.3s; /* 在悬停时添加过渡 */
+	  padding: 15px; /* 15px 内边距 */
+	  width: 100px; /* 设置特定宽度 */
+	  text-decoration: none; /* 删除下划线 */
+	 font-size: 20px; /* 增加字体大小 */
+	  color: white; /* 白色文本颜色 */
+	  border-radius: 0 5px 5px 0; /* 右上角和右下角的圆角 */
+	}
+	
+	#mySidenav a:hover {
+	  left: 0; /* 鼠标悬停时，使元素按应有的方式显示 */
+	}
+	
+	/* about 链接：距离顶部 20 像素，背景为绿色 */
+	#about {
+	  top: 320px;
+	  background-color: #4CAF50;
+	}
+	
+	#blog {
+	  top: 380px;
+	  background-color: #2196F3; /* Blue */
+	}
+	
+	#projects {
+	  top:440px ;
+	  background-color: #f44336; /* Red */
+	}
+	
+	#contact {
+	  top:500px;
+	  background-color: #555 /* 浅黑色 */
+	}
+	#contact1{
+		top:560px;
+		background-color: yellow;
+	}
+	#contact2{
+		top:620px;
+		background-color: #2196F3;
+		text-align: center;
+	}
+	
+	#movie-Panel{
+		position: absolute;
+		width: 1395px;
+		height: 643px;
+		margin-top: 12.625rem;
+		margin-left: 161px;
+	/* 	border: 1px red solid ; */
+		display: block;
+	}
+	#video1{
+		position: relative;
+		margin-top: auto;
+		margin-left: 149px;
+		display: none;
+		}
+	#video2{
+			margin-top: ;
+			margin-left:10px;
+			display: none;
+			
+		}
+	#video3
+	{
+		margin-top: ;
+		margin-left:10px;
+		display: none;
+	}
+	#video4{
+		margin-top: ;
+		margin-left:10px;
+		display: none;
+	}
+	#video1:target
+		{
+			display: block;
+		}
+	#video2:target{
+		display: block;
+	}
+	#video3:target{
+		display: block;
+	}
+	#video4:target{
+		display: block;
+		
+	}

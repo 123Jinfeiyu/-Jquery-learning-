@@ -1,0 +1,263 @@
+body {
+    background-color: rgb(208, 208, 208);
+}
+.banner {
+    margin: 0px auto;
+    width: 800px;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+header:hover {
+    box-shadow: 0px 0px 10px 0px #fff inset;
+}
+
+header .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: aliceblue;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+header .title form input {
+    padding-left: 5px;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+    transition: all 0.3s;
+    border: 0px;
+}
+
+.halo {
+    box-shadow: 0px 0px 10px #fff;
+}
+
+header .title form input::placeholder {
+    color: #666;
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+}
+
+.styles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.styles>span {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgb(178, 242, 255);
+    line-height: 26px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.styles>span:hover {
+    box-shadow: 0px 0px 10px #fff;
+}
+
+ul.banner {
+    margin-top: 10px;
+}
+
+ul.banner li {
+    position: relative;
+    margin-bottom: 10px;
+    border: 3px solid #333;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 34px;
+    border-left: 10px solid rgb(94, 255, 234);
+}
+
+ul.banner li form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.banner li form p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 40px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+ul.banner li form .down {
+    margin-right: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 19px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+ul.banner li form .down:hover {
+    box-shadow: 0px 0px 10px #fff;
+    background-color: rgb(238, 238, 238);
+}
+
+ul.banner li div.menu {
+    display: none;
+    position: absolute;
+    right: -60px;
+    top: -16px;
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+ul.banner li div.menu:hover {
+    box-shadow: 0px 0px 10px #fff;
+}
+
+ul.banner li div.menu .menu-top,
+ul.banner li div.menu .menu-bottom {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+    line-height: 29px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+ul.banner li div.menu .menu-top:hover,
+ul.banner li div.menu .menu-bottom:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+ul.banner li div.menu .menu-top {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+ul.banner li div.menu .menu-bottom {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+ol.banner li {
+    position: relative;
+    margin-bottom: 10px;
+    border: 3px solid #333;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 34px;
+    opacity: 0.7;
+    border-left: 10px solid rgb(231, 255, 111);
+}
+
+ol.banner li form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ol.banner li form p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 40px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+ol.banner li form .down {
+    margin-right: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 19px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+ol.banner li form .down:hover {
+    box-shadow: 0px 0px 10px #fff;
+    background-color: rgb(238, 238, 238);
+}
+
+ol.banner li div.menu {
+    display: none;
+    position: absolute;
+    right: -60px;
+    top: -16px;
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+ol.banner li div.menu:hover {
+    box-shadow: 0px 0px 10px #fff;
+}
+
+ol.banner li div.menu .menu-top,
+ol.banner li div.menu .menu-bottom {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+    line-height: 29px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+ol.banner li div.menu .menu-top:hover,
+ol.banner li div.menu .menu-bottom:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+ol.banner li div.menu .menu-top {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+ol.banner li div.menu .menu-bottom {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
