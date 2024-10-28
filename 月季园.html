@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>月季园</title>
+		<link rel="stylesheet" type="text/css" href="css/heart.css"/>
+	    <link rel="stylesheet" type="text/css" href="./css/yj.css"/>
+        <script src="./js/jQuery.min.js"></script>
+	</head>
+	   <div id="movie-Panel">
+	   
+		<video src="movie/video.mp4" controls id="video1"></video>
+	   <video src="movie/video1.mp4" controls id="video2"></video>
+	   <video src="movie/video2.mp4" controls id="video3"></video>
+	   <video src="movie/video3.mp4" controls id="video4"></video>
+	   </div>
+	
+	
+	<div id="mySidenav" class="sidenav">
+	<a href="#video1" id="about">走进季园</a>
+	  <a href="#video2" id="blog">欣赏月季</a>
+	 <a href="#video3" id="projects">与美景共舞</a>
+	 <a href="#video4" id="contact">快乐的日子</a>
+	<a href="#movie-Panel" id="contact1">让人留念</a>
+	</div>
+	
+	<body>
+	<div class="bg-img">
+	  <div class="container">
+	    <div class="topnav">
+	      <a href="index.html">游览首页</a>
+	      <a href="beautiful.html">南阳美景介绍</a>
+	      <a href="月季园.html">美丽的月季园</a>
+		  <a href="南阳名人.html">南阳名人</a>
+		  <a href="轮播图.html">南阳美景欣赏</a>
+		  <a href="留言.html">留言</a>
+		  <a href="表单验证.html">登陆注册</a>
+	    </div>
+	  </div>
+	</div>
+		
+	</body>
+	</html>
+	<script>
+	// 当用户滚动页面时，执行 myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// 获取导航栏的偏移位置
+var sticky = navbar.offsetTop;
+
+// 当到达滚动位置时，将粘性类添加到导航栏。 离开滚动位置时删除 "sticky"
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+	</script>

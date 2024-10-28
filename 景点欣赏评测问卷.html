@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>景点欣赏评测问卷</title> 
+		 <link rel="stylesheet" href="css/floatImg.css">
+		
+	</head>
+	<body>
+		<div id="div0" align="center" style="background-color:deepskyblue;"></div>
+             <form action="" method="">
+				 <table border="1"cellpadding=">
+			    <tr>
+					<th width="600px" height="100px">
+						<font size="100px">
+	                  <a href="index.html">回到首页</a> <strong>景点欣赏评测问卷</strong> 			  
+				     	</font></th>
+				</tr>
+			    <tr>
+					<td>
+					<p>
+						&nbsp;&nbsp;亲爱的游客，大家好！<br />
+					    &nbsp;&nbsp;为了更好的了解游客对今年来对南阳景点的看法，<br />
+						特制定本卷，希望得到你的配合，请认真阅读并且回答以下问题，你的回答<br />
+						将直接影响本调查的可信度和有效性，真诚感谢你的支持！祝你天天愉快！谢谢大家！<br />
+					</p>	
+						
+					</td></tr>
+			       <tr>
+			       	<td>
+						&nbsp;&nbsp;&nbsp;&nbsp;1，你的性别:<input type="radio" name="type"/>
+						男<input type="radio" name="type"/>女
+					</td>
+			       </tr>
+				   <tr>
+				   	<td>
+						2,你的学校：<input type="text" name="school"/>
+					</td>
+				   </tr>
+					<tr>
+						<td>
+							3，你的年级:
+							<input type="text" name="class" placeholder="请输入班级" list="class_list"/>
+							<datalist id="class_list">
+								<option value="1年级"></option>
+								<option value="2年级"></option>
+								<option value="3年级"></option>
+								<option value="4年级"></option>
+								<option value="5年级"></option>
+							</datalist>
+						</td>
+					</tr> 
+					 <tr>
+						 <td>
+							4,你喜欢南阳的哪个景点
+							 <input type="checkbox"/>老君山<br>
+							 <input type="checkbox"/>五朵山<br>
+							 <input type="checkbox"/>武当山<br>
+							 <input type="checkbox"/>丹江水库<br>
+							 <input type="checkbox"/>武侯祠<br>
+							 <input type="checkbox"/>白河<br>
+							 <input type="checkbox"/>南阳月季园<br>
+						 </td>
+						 
+					 </tr>
+					 <tr>
+					 	<td>5，你喜欢南阳的哪位名人？<br>
+							<input type="checkbox"/>诸葛亮<br />
+							<input type="checkbox"/>百里奚<br />
+							<input type="checkbox"/>范蠡<br>
+							<input type="checkbox"/>张衡<br>
+							<input type="checkbox"/>名嘴小靳<br>
+							<input type="checkbox"/>名嘴小猪<br>
+							<input type="checkbox"/>名嘴小彬彬<br>
+						</td>
+					 </tr>
+					 <tr>
+					<td>
+						6.您认为南阳的文化底蕴如何？<br>
+						<input type="checkbox" />可以<br>
+						<input type="checkbox" />不行<br>
+						<input type="checkbox" />勉强可以<br>
+					</td>
+				</tr><tr>
+					<td>
+						7.您是否对南阳的女孩情有独钟？<br>
+						<input type="checkbox" />没有<br>
+						<input type="checkbox" />啥也不是<br>
+						<input type="checkbox" />不知道<br>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						8.您对南阳市的评价：<br>
+						<input id="kw" name="wd" class="s_ipt" value="请你提出你的建设性建议！" size="150" maxlength="255" autocomplete="off">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="" id="submit" value="提交" " />
+						<input type="reset" name="" id="" value="重置" />
+					</td>
+				</tr>
+             </table>
+			 </form>
+			</div>
+	</body>
+	</html>
+	<img src="image/1.gif" alt="" width="240px " height="240px">
+	<script>
+	var img=document.querySelector('img');
+	        document.addEventListener('mousemove',function(e){
+	            console.log(e.pagex);//获取值
+	            var x=e.pageX;
+	            var y=e.pageY;
+	            img.style.left=x-5+'px';//减10是改变鼠标在图片的位置，也可以不减，设置图片样式
+	            img.style.top=y+5+'px';
+	        })
+	var sumit=document.getElementById("submit");
+
+		sumit.onclick=function(){
+        setTimeout(jump,5000);
+		alert("提交成功马上回到主页");
+		}
+	    function jump(){window.location.href="index.html";};
+	</script>

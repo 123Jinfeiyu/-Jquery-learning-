@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>南阳名人</title>
+		<link rel="stylesheet" type="text/css" href="css/heart.css"/>
+	</head>
+	<body >	
+	<div id="text3"><img src="./images/22.png" alt=""></div>
+	<div id="text2"><img src="./images/33.png" alt=""></div>
+	<div id="text1"><img src="./images/11.png" alt=""></div>
+		<div class="father_box">
+		
+			<div class="heart"><img src="../南阳名人轮播/1.png" alt=""></div>
+		</div>
+		<input type="button" name="" id="Button2" value="添加一个跳转按钮" onclick="addInput()" />
+        <br>	
+	<!-- <div class="text4"> -->
+	
+		<button id="prev">上一页</button>
+		<button id="next">下一页</button>
+		<!-- </div> -->
+	</body>
+
+</html>
+<script type="text/javascript">
+var i=0;
+function addInput()
+{	
+	//使用DOM创建元素的方法
+	var o=document.createElement("input");
+
+	o.type="button";
+	o.value="按钮"+(i++)+"回到首页";
+	o.id="btn"+i;
+	o.addEventListener("click",addInput,false);
+	if (o.addEventListener) {
+	       o.addEventListener("click",addInput,false);
+	    } else {
+	        // ie8及以下，只支持事件冒泡
+	        o.attachEvent("onclick",addInput);
+	    }
+    
+	document.body.appendChild(o);
+	o=document.getElementById("btn1");//及时解除无效的变量引用，将其值设为空值。
+	o.onclick=function()
+				{	 location.href="index.html";
+				}	
+				//自己调用自己结束
+	
+    }
+	
+	var img1=document.querySelector('.heart>img');
+	var prev1=document.querySelector("#prev");
+	var next1=document.querySelector("#next");
+	var s=0;
+	var imgArr=["南阳名人轮播/1.png","南阳名人轮播/2.png","南阳名人轮播/3.png","南阳名人轮播/4.png","南阳名人轮播/5.png"]
+	prev1.onclick=function(){
+		s=s-1;
+	img1.src=imgArr[s];
+	}
+    next1.onclick=function(){
+		s=s+1;
+	img1.src=imgArr[s];
+	}
+	
+</script>

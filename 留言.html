@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ch-CN">
+
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户留言面板</title>
+    <link rel="stylesheet" href="./css/bese.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jQuery.min.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body >
+    <header>
+        <div class="title banner">
+            <h1>用户留言面板</h1>
+            <form action="">
+                <input type="text" placeholder="添加留言">
+            </form>
+        </div>
+	
+    </header>
+    <script>
+        $(function() {
+            $('.title form input').on({
+                'focus': function() {
+                    $(this).addClass('halo');
+                },
+                'blur': function() {
+                    $(this).removeClass('halo');
+                }
+            });
+        });
+    </script>
+    <div class="top banner styles">
+        <h2>用户已经留下的留言</h2>
+        <span>2</span>
+    </div>
+    <ul class="banner"></ul>
+    <div class="bottom banner styles">
+        <h2>已经被审阅的留言</h2>
+        <span>2</span>
+    </div>
+	<button id="btn1">返回首页</button>
+    <ol class="banner"></ol>
+    <script>
+	var btn1=document.getElementById("btn1");
+	btn1.onclick=function(){location.href="index.html";
+	}
+	//addEventListen("click",function(){location.href="index,html"})
+        $(function() {
+            $('ul.banner li form .down,ol.banner li form .down').on({
+                mouseover: function() {
+                    $(this).children('.menu').stop().show(100);
+                },
+                mouseout: function() {
+                    $(this).children('.menu').stop().hide(100);
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
